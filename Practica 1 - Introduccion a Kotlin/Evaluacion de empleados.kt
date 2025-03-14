@@ -40,7 +40,7 @@ fun evaluarEmpleados(salario: Double, puntuacion: Int): String {
         else -> "Desconocido" // Control de error: menores que 0 o mayores a 10
     }
 
-    // Retornar el resultado en un solo mensaje
+    // Retornar el resultado en el formato solicitado
     return "Nivel de Rendimiento: $nivel, Cantidad de Dinero Recibido: $${"%.2f".format(adicional)}"
 }
 

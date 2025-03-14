@@ -5,7 +5,7 @@ package `Practica 1 - Introduccion a Kotlin`
     Curso: Programacion De Dispositivos Moviles
     Semestre: VI
     Fecha: 14/03/2025
-    Ultima modificacion: 14/03/2025 08:12 am
+    Ultima modificacion: 14/03/2025 11:02 am
 */
 
 /*
@@ -28,6 +28,7 @@ package `Practica 1 - Introduccion a Kotlin`
     Resultado: Nivel de Rendimiento Meritorio, Cantidad de Dinero Recibido $8000
  */
 
+// Funcion que evalua que la puntuacion este dentro del rango
 fun evaluarRango(puntuacion: Int): Boolean {
     return puntuacion in 0..10
 }

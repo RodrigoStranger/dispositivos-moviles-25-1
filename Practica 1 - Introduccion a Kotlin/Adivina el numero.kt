@@ -8,3 +8,9 @@ package `Practica 1 - Introduccion a Kotlin`
     Ultima modificacion: 14/03/2025
 */
 
+import kotlin.random.Random
+
+fun numeroAleatorio(): Int {
+    return Random.nextInt(1, 31) // Genera un número entre 1 - 30
+}
+

@@ -1,7 +1,8 @@
 # Programación Para Dispositivos Moviles
-- **Semestre:** [2025 - I]  
-- **Profesor encargado:** [Josue Miguel Flores Parra]  
-- **Autor:** [Rodrigo Emerson Infanzón Acosta]
+- **Ciclo academido:** 2025 - II
+- **Semestre:** VI
+- **Profesor encargado:** Josue Miguel Flores Parra
+- **Autor:** Rodrigo Emerson Infanzón Acosta
 
 ## [`Practica 1: Introducción a Kotlin`](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/tree/main/Practica%201%20-%20Introduccion%20a%20Kotlin)
 
@@ -15,4 +16,7 @@
 
 ### Entregables
 
-- [`binarytree.kt`](./binarytrees/binarytree.cpp)
+- [`Adivina el numero.kt`](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/blob/main/Practica%201%20-%20Introduccion%20a%20Kotlin/Adivina%20el%20numero.kt)
+- [`Calculadora elemental.kt`](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/blob/main/Practica%201%20-%20Introduccion%20a%20Kotlin/Calculadora%20elemental.kt)
+- [`Evaluacion de empleados.kt`](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/blob/main/Practica%201%20-%20Introduccion%20a%20Kotlin/Evaluacion%20de%20empleados.kt)
+- [`Piedra, papel o tijeras.kt`](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/blob/main/Practica%201%20-%20Introduccion%20a%20Kotlin/Piedra%2C%20papel%20o%20tijeras.kt)

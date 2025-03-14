@@ -46,6 +46,6 @@ fun evaluarEmpleados(salario: Double, puntuacion: Int): String {
 
 fun main() {
 
-    // Evaluar a un empleado
-    println(evaluarEmpleados(10000.0,8 ))
+    // Evaluar a un empleado con salario 10000 y puntuacion de 8
+    println(evaluarEmpleados(10000.0,8))
 }

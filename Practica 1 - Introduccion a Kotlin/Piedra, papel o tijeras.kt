@@ -5,7 +5,7 @@ package `Practica 1 - Introduccion a Kotlin`
     Curso: Programacion De Dispositivos Moviles
     Semestre: VI
     Fecha: 14/03/2025
-    Ultima modificacion: 08:52 am
+    Ultima modificacion: 14/03/2025 10:55 am
 */
 
 /*

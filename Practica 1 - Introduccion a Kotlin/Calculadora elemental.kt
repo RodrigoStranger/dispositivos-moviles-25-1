@@ -9,7 +9,9 @@ package `Practica 1 - Introduccion a Kotlin`
 */
 
 /*
-    Calculadora básica con las operaciones:
+    Descripcion del problema:
+
+    Realizar una calculadora básica con las operaciones:
     - Suma, Resta, Multiplicación, División y opción para Salir.
 
     Funcionalidad:

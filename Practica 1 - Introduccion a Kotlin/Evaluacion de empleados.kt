@@ -28,17 +28,26 @@ package `Practica 1 - Introduccion a Kotlin`
     Resultado: Nivel de Rendimiento Meritorio, Cantidad de Dinero Recibido $8000
  */
 
+fun evaluarRango(puntuacion: Int): Boolean {
+    return puntuacion in 0..10
+}
+
 // Funcion para evaluar al empleado: entrada el salario y la puntuacion
 fun evaluarEmpleados(salario: Double, puntuacion: Int): String {
-    // Calcular el dinero adicional basado en la formula de puntuacion
+    // Si la puntuación es inválida, establecerla en "Desconocido" y el dinero en 0
+    if (!evaluarRango(puntuacion)) {
+        return "Nivel de Rendimiento: Desconocido, Cantidad de Dinero Recibido: $0.00"
+    }
+
+    // Calcular el dinero adicional basado en la fórmula de puntuación
     val adicional: Double = salario * (puntuacion / 10.0)
 
-    // Determinar nivel de rendimiento de acuerdo a la puntuacion
+    // Determinar nivel de rendimiento de acuerdo a la puntuación del empleado
     val nivel = when (puntuacion) {
-        in 0..3 -> "Inaceptable" // 0, 1, 2, 3
-        in 4..6 -> "Aceptable" // 4, 5, 6
-        in 7..10 -> "Meritorio" // 7, 8, 9, 10
-        else -> "Desconocido" // Control de error: menores que 0 o mayores a 10
+        in 0..3 -> "Inaceptable"
+        in 4..6 -> "Aceptable"
+        in 7..10 -> "Meritorio"
+        else -> "Desconocido"
     }
 
     // Retornar el resultado en el formato solicitado
@@ -46,7 +55,6 @@ fun evaluarEmpleados(salario: Double, puntuacion: Int): String {
 }
 
 fun main() {
-
-    // Evaluar a un empleado con salario 10000 y puntuacion de 8
-    println(evaluarEmpleados(10000.0,8))
+    // Evaluar a un empleado
+    println(evaluarEmpleados(10000.0,11))
 }

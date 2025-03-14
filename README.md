@@ -1,5 +1,5 @@
 # Programación Para Dispositivos Moviles
-- **Ciclo academido:** 2025 - II
+- **Ciclo academido:** 2025 - I
 - **Semestre:** VI
 - **Profesor encargado:** Josue Miguel Flores Parra
 - **Autor:** Rodrigo Emerson Infanzón Acosta

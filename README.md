@@ -1,6 +1,7 @@
 # Programación Para Dispositivos Moviles
-
-## Rodrigo Emerson Infanzón Acosta
+- **Semestre:** [2025 - I]  
+- **Profesor encargado:** [Josue Miguel Flores Parra]  
+- **Autor:** [Rodrigo Emerson Infanzón Acosta]
 
 ## [`Practica 1: Introducción a Kotlin`](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/tree/main/Practica%201%20-%20Introduccion%20a%20Kotlin)
 

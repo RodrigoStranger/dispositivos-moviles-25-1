@@ -26,7 +26,7 @@ package `Practica 1 - Introduccion a Kotlin`
 
     Ejemplo: Salario 10,000; Puntuación 8. Dinero = 10,000 * (8/10)= 8000.
     Resultado: Nivel de Rendimiento Meritorio, Cantidad de Dinero Recibido $8000
- */
+*/
 
 // Funcion que evalua que la puntuacion este dentro del rango
 fun evaluarRango(puntuacion: Int): Boolean {

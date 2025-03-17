@@ -15,7 +15,7 @@ package `Practica 1 - Introduccion a Kotlin`
     Continúa solicitando intentos hasta que el usuario adivine correctamente el número.
     Tienes 5 intentos, si se acaba debe imprimir game over.
     De lo contrario mostrar un mensaje de felicitación por ganar el juego.
- */
+*/
 
 // Importacion: https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.random/-random/
 import kotlin.random.Random

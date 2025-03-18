@@ -5,7 +5,7 @@ package `Practica 1 - Introduccion a Kotlin`
     Curso: Programacion De Dispositivos Moviles
     Semestre: VI
     Fecha: 14/03/2025
-    Ultima modificacion: 14/03/2025 10.50 am
+    Ultima modificacion: 18/03/2025 9.51 am
 */
 
 /*
@@ -42,9 +42,18 @@ fun mostrarMenu() {
 }
 
 // Funciones de operaciones matemáticas
-fun suma(a: Number, b: Number) = a.toDouble() + b.toDouble() // Suma dos numeros
-fun resta(a: Number, b: Number) = a.toDouble() - b.toDouble() // Resta dos numeros
-fun multiplicacion(a: Number, b: Number) = a.toDouble() * b.toDouble() // Multiplica dos numeros
+
+// Función para sumar dos números
+// Se usa Number para aceptar tanto enteros (Int) como decimales (Double, Float)
+fun suma(a: Number, b: Number): Double = a.toDouble() + b.toDouble()
+
+// Función para restar dos números
+// Convierte ambos valores a Double para asegurar precisión en cálculos mixtos (Int, Float, Double)
+fun resta(a: Number, b: Number): Double = a.toDouble() - b.toDouble()
+
+// Función para multiplicar dos números
+// Permite operar con diferentes tipos numéricos sin errores de tipo
+fun multiplicacion(a: Number, b: Number): Double = a.toDouble() * b.toDouble()
 
 // Función para la división con manejo de error si el divisor es 0
 fun division(a: Number, b: Number): String =
@@ -68,26 +77,31 @@ fun main() {
     // Llama a la función para mostrar el menú de opciones
     mostrarMenu()
 
-    // Lee la opción y la convierte a entero
+    // Lee la entrada del usuario y maneja posibles errores
+    // readlnOrNull() devuelve null si la entrada está vacía o hay un error
+    // toIntOrNull() convierte el valor a Int, pero si la conversión falla (por ejemplo, si el usuario ingresa letras), devuelve null
+    // ?: 0 es el operador Elvis, que asigna 0 si toIntOrNull() devuelve null (para evitar errores)
     val opcion = readlnOrNull()?.toIntOrNull() ?: 0
 
-    // Si la opción es válida (entre 1 y 4) // Lee el primer número
+    // Verifica si la opción ingresada está en el rango válido (1 a 4)
     if (opcion in 1..4) {
+        // Pide al usuario ingresar el primer número
         print("\nIngrese el primer número: ")
-        val numero1 = readlnOrNull()?.toDoubleOrNull()
+        val numero1 = readlnOrNull()?.toDoubleOrNull() // Convierte la entrada a Double, o devuelve null si la conversión falla
 
+        // Pide al usuario ingresar el segundo número
         print("Ingrese el segundo número: ")
-        val numero2 = readlnOrNull()?.toDoubleOrNull()
+        val numero2 = readlnOrNull()?.toDoubleOrNull() // Convierte la entrada a Double, o devuelve null si la conversión falla
 
         // Verifica si los números ingresados son válidos
         if (numero1 != null && numero2 != null) {
             println(calculadora(opcion, numero1, numero2)) // Llama a la función calculadora y muestra el resultado
         } else {
-            println("Entrada no válida o vacia") // Mensaje de error si la entrada es inválida
+            println("Entrada no válida o vacía") // Mensaje de error si la entrada es inválida
         }
     } else if (opcion == 5) { // Si el usuario elige salir
         println("\nSaliendo de la calculadora...")
     } else {
-        println("\nOpción no reconocida..") // Mensaje de error si la opción no es válida
+        println("\nOpción no reconocida.") // Mensaje de error si la opción no es válida
     }
 }

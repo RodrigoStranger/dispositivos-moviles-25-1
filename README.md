@@ -14,7 +14,6 @@
 ### 📝 Descripción  
 Esta práctica tiene como objetivo familiarizarse con el lenguaje de programación **Kotlin** a través de ejercicios básicos de lógica de programación. Se trabajará con estructuras condicionales, bucles, generación de números aleatorios y operaciones matemáticas.
 
----
 
 ## 🔹 Ejercicios  
 
@@ -35,7 +34,6 @@ El dinero extra se calcula con la fórmula:
 
 🔗 [Ejercicio desarrollado](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/blob/main/Practica%201%20-%20Introduccion%20a%20Kotlin/Evaluacion%20de%20empleados.kt)  
 
----
 
 ### 2️⃣ Piedra, papel o tijeras  
 Se implementará el clásico juego **Piedra, Papel o Tijeras**, donde el usuario jugará contra la computadora.  
@@ -47,16 +45,11 @@ Se implementará el clásico juego **Piedra, Papel o Tijeras**, donde el usuario
 
 📍 **Ejemplo:**  
 **Entrada:** Usuario = `Piedra`, Computadora = `Tijeras`  
-**Salida:** `Elige entre piedra, papel o tijera: papel`
-
-`Elegiste: papel`
-`La computadora eligió: tijera`
-
-`Perdiste...`  
+**Salida:** `Ganaste!!!`  
 
 🔗 [Ejercicio desarrollado](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/blob/main/Practica%201%20-%20Introduccion%20a%20Kotlin/Piedra%2C%20papel%20o%20tijeras.kt)  
 
----
+
 
 ### 3️⃣ Calculadora elemental  
 Se desarrollará una calculadora con las **cuatro operaciones básicas**:  
@@ -96,3 +89,4 @@ El programa genera un número aleatorio entre **1 y 30** y el usuario debe adivi
 
 🔗 [Ejercicio desarrollado](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/blob/main/Practica%201%20-%20Introduccion%20a%20Kotlin/Adivina%20el%20numero.kt)  
 
+---

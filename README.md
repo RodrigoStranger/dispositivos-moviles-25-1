@@ -66,11 +66,11 @@ Se desarrollará una calculadora con las **cuatro operaciones básicas**:
 ### 📌 Menú de la Calculadora  
 
 #### ==== Menú ====  
-1️⃣ Suma  
-2️⃣ Resta  
-3️⃣ Multiplicación  
-4️⃣ División  
-5️⃣ Salir  
+1. Suma  
+2. Resta
+3.  Multiplicación
+4.  División
+5.  Salir  
 
 📌 **Tareas del programa:**  
 - Mostrar un **menú de opciones**.  

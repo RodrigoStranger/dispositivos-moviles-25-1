@@ -47,12 +47,12 @@ Se implementará el clásico juego **Piedra, Papel o Tijeras**, donde el usuario
 
 📍 **Ejemplo:**  
 **Entrada:** Usuario = `Piedra`, Computadora = `Tijeras`  
-**Salida:** `Elige entre piedra, papel o tijera: papel
+**Salida:** `Elige entre piedra, papel o tijera: papel`
 
-Elegiste: papel
-La computadora eligió: tijera
+`Elegiste: papel`
+`La computadora eligió: tijera`
 
-Perdiste...`  
+`Perdiste...`  
 
 🔗 [Ejercicio desarrollado](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/blob/main/Practica%201%20-%20Introduccion%20a%20Kotlin/Piedra%2C%20papel%20o%20tijeras.kt)  
 

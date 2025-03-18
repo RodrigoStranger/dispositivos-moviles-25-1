@@ -62,10 +62,15 @@ Se implementará el clásico juego **Piedra, Papel o Tijeras**, donde el usuario
 
 ### 3️⃣ Calculadora elemental  
 Se desarrollará una calculadora con las **cuatro operaciones básicas**:  
-- ➕ Suma  
-- ➖ Resta  
-- ✖ Multiplicación  
-- ➗ División  
+
+### 📌 Menú de la Calculadora  
+
+#### ==== Menú ====  
+1️⃣ Suma  
+2️⃣ Resta  
+3️⃣ Multiplicación  
+4️⃣ División  
+5️⃣ Salir  
 
 📌 **Tareas del programa:**  
 - Mostrar un **menú de opciones**.  

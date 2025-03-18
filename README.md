@@ -11,7 +11,6 @@
 
 🔗 [Repositorio de la práctica](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/tree/main/Practica%201%20-%20Introduccion%20a%20Kotlin)  
 
-### 📝 Descripción  
 Esta práctica tiene como objetivo familiarizarse con el lenguaje de programación **Kotlin** a través de ejercicios básicos de lógica de programación. Se trabajará con estructuras condicionales, bucles, generación de números aleatorios y operaciones matemáticas.
 
 

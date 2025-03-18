@@ -33,6 +33,7 @@ El dinero extra se calcula con la fórmula:
 
 🔗 [Ejercicio desarrollado](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/blob/main/Practica%201%20-%20Introduccion%20a%20Kotlin/Evaluacion%20de%20empleados.kt)  
 
+---
 
 ### 2️⃣ Piedra, papel o tijeras  
 Se implementará el clásico juego **Piedra, Papel o Tijeras**, donde el usuario jugará contra la computadora.  
@@ -48,7 +49,7 @@ Se implementará el clásico juego **Piedra, Papel o Tijeras**, donde el usuario
 
 🔗 [Ejercicio desarrollado](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/blob/main/Practica%201%20-%20Introduccion%20a%20Kotlin/Piedra%2C%20papel%20o%20tijeras.kt)  
 
-
+---
 
 ### 3️⃣ Calculadora elemental  
 Se desarrollará una calculadora con las **cuatro operaciones básicas**:  

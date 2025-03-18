@@ -22,6 +22,15 @@ El dinero extra se calcula con la fórmula:
 
 > **Dinero = Salario Mensual × (Puntuación / 10)**
 
+📌 **Niveles de rendimiento:**  
+-----------------------------
+| Nivel       | Puntuación  |
+|------------ |------------ |
+| Inaceptable | 0 a 3       |
+| Aceptable   | 4 a 6       |
+| Meritorio   | 7 a 10      |
+----------------------------
+
 📌 **Tareas del programa:**  
 - Leer la puntuación y el salario mensual del usuario.  
 - Determinar el nivel de rendimiento según la puntuación.  

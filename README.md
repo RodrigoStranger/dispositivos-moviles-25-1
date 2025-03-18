@@ -88,5 +88,3 @@ El programa genera un número aleatorio entre **1 y 30** y el usuario debe adivi
 **Salida:** `El número es mayor. Intenta de nuevo.`  
 
 🔗 [Ejercicio desarrollado](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/blob/main/Practica%201%20-%20Introduccion%20a%20Kotlin/Adivina%20el%20numero.kt)  
-
----

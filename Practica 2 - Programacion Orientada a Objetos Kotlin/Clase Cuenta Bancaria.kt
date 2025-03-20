@@ -5,7 +5,7 @@ package `Practica 2 - Programacion Orientada a Objetos Kotlin`
     Curso: Programacion De Dispositivos Moviles
     Semestre: VI
     Fecha: 20/03/2025
-    Ultima modificacion: 20/03/2025 14:13 pm
+    Ultima modificacion: 20/03/2025 14:16 pm
 */
 
 /*
@@ -74,7 +74,7 @@ fun main() {
 
     println("Saldo inicial: ${cuenta.getSaldo()}")
 
-    cuenta.retirar(400)
+    cuenta.retirar(501)
 
     cuenta.retirar(200)
 

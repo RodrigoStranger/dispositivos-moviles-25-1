@@ -100,5 +100,5 @@ fun main() {
     println("Saldo inicial de la cuenta: ${cuenta.getSaldo()}\n")
 
     //Pruebas en general (modificables)
-    cuenta.setLimiteRetiro(1500)
+    cuenta.setSaldo(100)
 }

@@ -5,7 +5,7 @@ package `Practica 2 - Programacion Orientada a Objetos Kotlin`
     Curso: Programacion De Dispositivos Moviles
     Semestre: VI
     Fecha: 20/03/2025
-    Ultima modificacion: 20/03/2025 14:05 pm
+    Ultima modificacion: 20/03/2025 14:13 pm
 */
 
 /*
@@ -50,11 +50,19 @@ class CuentaBancaria(private var saldo: Number, private var limiteRetiro: Number
         val limiteDouble = limiteRetiro.toDouble()
 
         when {
-            montoDouble > saldoDouble -> println("Error: Saldo insuficiente.")
-            montoDouble > limiteDouble -> println("Error: El monto excede el límite de retiro.")
+            montoDouble > saldoDouble -> {
+                val faltante = montoDouble - saldoDouble
+                println("Saldo insuficiente")
+                println("Falta $faltante para completar el retiro")
+            }
+            montoDouble > limiteDouble -> {
+                println("El monto excede el límite de retiro.")
+                println("Se permite hasta $limiteDouble")
+            }
             else -> {
                 saldo = saldoDouble - montoDouble
-                println("Retiro exitoso. Nuevo saldo: $saldo")
+                println("Retiro exitoso!!!")
+                println("Saldo actualizado de la cuenta: $saldo")
             }
         }
     }

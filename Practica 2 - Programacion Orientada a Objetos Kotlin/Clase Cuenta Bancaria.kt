@@ -25,7 +25,7 @@ class CuentaBancaria(private var saldo: Number, private var limiteRetiro: Number
         if (nuevoSaldo.toDouble() >= 0) {
             saldo = nuevoSaldo
         } else {
-            println("No puede existir un saldo negativo")
+            println("No puede existir un saldo negativo\n")
         }
     }
 
@@ -39,7 +39,7 @@ class CuentaBancaria(private var saldo: Number, private var limiteRetiro: Number
         if (nuevoLimite.toDouble() > 0) {
             limiteRetiro = nuevoLimite
         } else {
-            println("El limite de retiro debe ser mayor a 0")
+            println("El limite de retiro debe ser mayor a 0\n")
         }
     }
 
@@ -53,17 +53,29 @@ class CuentaBancaria(private var saldo: Number, private var limiteRetiro: Number
             montoDouble > saldoDouble -> {
                 val faltante = montoDouble - saldoDouble
                 println("Saldo insuficiente")
-                println("Falta $faltante para completar el retiro")
+                println("Falta $faltante para completar el retiro\n")
             }
             montoDouble > limiteDouble -> {
                 println("El monto excede el límite de retiro.")
-                println("Se permite hasta $limiteDouble")
+                println("Se permite hasta $limiteDouble\n")
             }
             else -> {
                 saldo = saldoDouble - montoDouble
                 println("Retiro exitoso!!!")
-                println("Saldo actualizado de la cuenta: $saldo")
+                println("Saldo actualizado de la cuenta: $saldo\n")
             }
         }
     }
+}
+
+
+fun main() {
+    val cuenta = CuentaBancaria(5000, 500)
+
+    println("Saldo inicial: ${cuenta.getSaldo()}")
+
+    cuenta.retirar(400)
+
+    cuenta.retirar(200)
+
 }

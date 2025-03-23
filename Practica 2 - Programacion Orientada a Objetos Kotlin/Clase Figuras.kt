@@ -117,7 +117,7 @@ class Circulo(private var radio: Number) : Shape() {
         perimetro = 2 * Math.PI * radio.toDouble()
     }
 
-    // Método para imprimir los atributos del círculo
+    // Metodo para imprimir los atributos del círculo
     fun imprimirAtributos() {
         println("Atributos del Círculo:")
         println("Radio: $radio")

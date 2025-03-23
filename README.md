@@ -110,3 +110,24 @@ El programa genera un número aleatorio entre **1 y 30** y el usuario debe adivi
 🔗 [Repositorio de la práctica](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/tree/main/Practica%202%20-%20Programacion%20Orientada%20a%20Objetos%20Kotlin)  
 
 Esta práctica tiene como objetivo aplicar los conceptos de **Programación Orientada a Objetos (POO)** en **Kotlin**, incluyendo el uso de **clases, herencia, interfaces y encapsulamiento**.  
+
+## 🔹 Ejercicios  
+
+### 1️⃣ Cuenta Bancaria  
+📌 **Descripción:**  
+Se debe implementar una clase `CuentaBancaria` con un saldo y un límite de retiro.  
+
+📍 **Requisitos:**  
+- Métodos `set` y `get` para el saldo.  
+- Validar los datos al establecer el saldo.  
+- Método `retirar` que valide el límite de retiro.  
+
+📍 **Ejemplo de uso:**  
+
+```bash
+> Ingrese saldo inicial: 5000
+> Ingrese límite de retiro: 1000
+> Ingrese monto a retirar: 1200
+No puedes retirar más del límite permitido.
+> Ingrese monto a retirar: 800
+Retiro exitoso. Saldo restante: 4200

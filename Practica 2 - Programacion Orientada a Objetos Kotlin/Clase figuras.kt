@@ -23,11 +23,11 @@ abstract class Shape {
     protected var area: Number = 0.0
     protected var perimetro: Number = 0.0
 
-    // Métodos abstractos: Obligan a las subclases a definir cómo calcular área y perímetro
+    // Metodos abstractos: Obligan a las subclases a definir cómo calcular área y perímetro
     abstract fun calcularArea()
     abstract fun calcularPerimetro()
 
-    // Método común para imprimir los resultados de cada figura
+    // Metodo común para imprimir los resultados de cada figura
     fun imprimirResultados(nombre: String) {
         println("Resultados del $nombre")
         println("Área: $area")

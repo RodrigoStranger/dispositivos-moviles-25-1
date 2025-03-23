@@ -126,21 +126,21 @@ class Circulo(private var radio: Number) : Shape() {
 
 // Función principal donde se crean instancias de las figuras y se ejecutan las operaciones
 fun main() {
-    // Creación de un cuadrado con un lado válido
+    // Creación de un cuadrado
     val cuadrado = Cuadrado(4)
     cuadrado.imprimirAtributos() // Muestra los atributos
     cuadrado.calcularArea()
     cuadrado.calcularPerimetro()
     cuadrado.imprimirResultados("Cuadrado") // Muestra el área y el perímetro
 
-    // Creación de un rectángulo con valores válidos
+    // Creación de un rectángulo
     val rectangulo = Rectangulo(5, 3)
     rectangulo.imprimirAtributos()
     rectangulo.calcularArea()
     rectangulo.calcularPerimetro()
     rectangulo.imprimirResultados("Rectángulo")
 
-    // Creación de un círculo con un radio válido
+    // Creación de un círculo
     val circulo = Circulo(2.5)
     circulo.imprimirAtributos()
     circulo.calcularArea()

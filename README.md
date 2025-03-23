@@ -136,3 +136,21 @@ Retiro exitoso. Saldo restante: 4200
 🔗 [Ejercicio desarrollado](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/blob/main/Practica%202%20-%20Programacion%20Orientada%20a%20Objetos%20Kotlin/Clase%20cuenta%20bancaria.kt) 
 
 ---
+
+### 2️⃣ Producto
+📌 **Descripción:**
+Se debe implementar una clase `Producto` con un precio y un descuento aplicable.
+
+📍 **Requisitos:**
+
+- Métodos `set` y `get` para establecer y obtener el precio y el descuento.
+- Método para calcular el `precio final` después de aplicar el descuento.
+- Validar los datos al establecer el precio y el descuento.
+
+📍 **Ejemplo de uso:** 
+
+> Ingrese precio del producto: 100
+> Ingrese porcentaje de descuento: 15
+Precio final con descuento: 85.0
+
+🔗 [Ejercicio desarrollado](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/blob/main/Practica%202%20-%20Programacion%20Orientada%20a%20Objetos%20Kotlin/Clase%20producto.kt) 

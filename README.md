@@ -208,5 +208,6 @@ Préstamo realizado correctamente.
 Devolución exitosa. El libro está disponible nuevamente.
 ```
 
----
+🔗 [Ejercicio desarrollado](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/blob/main/Practica%202%20-%20Programacion%20Orientada%20a%20Objetos%20Kotlin/Sistema%20de%20gestion%20de%20bibliotecas.kt)
+
 ---

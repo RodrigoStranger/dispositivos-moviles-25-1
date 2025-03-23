@@ -131,3 +131,8 @@ Se debe implementar una clase `CuentaBancaria` con un saldo y un límite de reti
 No puedes retirar más del límite permitido.
 > Ingrese monto a retirar: 800
 Retiro exitoso. Saldo restante: 4200
+```
+
+🔗 [Ejercicio desarrollado](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/blob/main/Practica%201%20-%20Introduccion%20a%20Kotlin/Adivina%20el%20numero.kt) 
+
+---

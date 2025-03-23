@@ -5,13 +5,13 @@ package `Practica 2 - Programacion Orientada a Objetos Kotlin`
     Curso: Programacion De Dispositivos Moviles
     Semestre: VI
     Fecha: 20/03/2025
-    Ultima modificacion: 22/03/2025 22:53 pm
+    Ultima modificacion: 22/03/2025 22:56 pm
 */
 
 /*
     Diseña una clase CuentaBancaria que tenga un saldo y un límite de retiro.
     Implementa métodos set y get para establecer y obtener el saldo,
-    y añade un método para realizar retiros que tenga en cuenta el límite de retiro.
+    y añade un metodo para realizar retiros que tenga en cuenta el límite de retiro.
     Utilice el set para validar datos.
 */
 
@@ -71,7 +71,7 @@ class CuentaBancaria(
     }
 }
 
-// Función principal para probar la clase CuentaBancaria
+// Función principal
 fun main() {
     // Se crea una cuenta bancaria con un saldo inicial de 500 y un límite de retiro de 500
     val cuenta = CuentaBancaria(500, 500)
@@ -82,5 +82,5 @@ fun main() {
     // Pruebas modificando el saldo y el límite de retiro
     cuenta.saldoActual = 100
     cuenta.limiteDeRetiro = 200
-    cuenta.retirar(50)
+    cuenta.retirar(150)
 }

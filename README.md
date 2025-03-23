@@ -155,4 +155,28 @@ Se debe implementar una clase `Producto` con un precio y un descuento aplicable.
 Precio final con descuento: 85.0
 ```
 
-🔗 [Ejercicio desarrollado](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/blob/main/Practica%202%20-%20Programacion%20Orientada%20a%20Objetos%20Kotlin/Clase%20producto.kt) 
+🔗 [Ejercicio desarrollado](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/blob/main/Practica%202%20-%20Programacion%20Orientada%20a%20Objetos%20Kotlin/Clase%20producto.kt)
+
+---
+
+### 3️⃣ Figuras
+📌 **Descripción:**
+Se debe crear una clase abstracta Shape con métodos para calcular el área y el perímetro.
+
+📍 **Requisitos:**
+
+- Clase `Shape` con propiedades área y perímetro.
+- Métodos abstractos para `calcular el área` y el `perímetro`.
+- Subclases `Cuadrado`, `Círculo` y `Rectángulo` que implementen los cálculos.
+
+📍 **Ejemplo de uso:**
+
+```bash
+> Crear cuadrado con lado 4
+Área: 16, Perímetro: 16
+
+> Crear círculo con radio 3
+Área: 28.27, Perímetro: 18.
+```
+🔗 [Ejercicio desarrollado](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/blob/main/Practica%202%20-%20Programacion%20Orientada%20a%20Objetos%20Kotlin/Clase%20figuras.kt)
+

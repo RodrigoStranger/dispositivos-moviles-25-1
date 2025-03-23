@@ -180,3 +180,33 @@ Se debe crear una clase abstracta Shape con métodos para calcular el área y el
 ```
 🔗 [Ejercicio desarrollado](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/blob/main/Practica%202%20-%20Programacion%20Orientada%20a%20Objetos%20Kotlin/Clase%20figuras.kt)
 
+---
+
+### 4️⃣ Sistema de Gestión de Biblioteca
+📌 **Descripción:**
+Se debe diseñar un sistema de biblioteca con las siguientes clases e interfaces:
+
+📍 **Estructura:**
+
+- Material: Clase abstracta con propiedades como `título`, `autor`, `añoPublicacion`.
+- Libro: Subclase con `género`, `númeroPáginas`, `mostrarDetalles()`.
+- Revista: Subclase con `ISSN`, `volumen`, `editorial`, `mostrarDetalles()`.
+- Usuario: Data class con `nombre`, `apellido`, `edad`.
+- IBiblioteca: Interfaz con métodos `registrarMaterial()`, `préstamo()`, `devolución()`.
+- Biblioteca: Clase que gestiona los préstamos y devoluciones, implementa la interfaz.
+
+📍 **Ejemplo de uso:**
+
+```bash
+> Registrar usuario: Juan Pérez, 25 años
+Usuario registrado con éxito.
+> Registrar libro: "El Quijote", Miguel de Cervantes, 1605
+Material registrado con éxito.
+> Prestar libro a Juan Pérez
+Préstamo realizado correctamente.
+> Devolver libro
+Devolución exitosa. El libro está disponible nuevamente.
+```
+
+---
+---

@@ -133,6 +133,6 @@ No puedes retirar más del límite permitido.
 Retiro exitoso. Saldo restante: 4200
 ```
 
-🔗 [Ejercicio desarrollado](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/blob/main/Practica%201%20-%20Introduccion%20a%20Kotlin/Adivina%20el%20numero.kt) 
+🔗 [Ejercicio desarrollado](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/blob/main/Practica%202%20-%20Programacion%20Orientada%20a%20Objetos%20Kotlin/Clase%20cuenta%20bancaria.kt) 
 
 ---

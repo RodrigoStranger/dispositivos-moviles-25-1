@@ -107,3 +107,6 @@ El programa genera un número aleatorio entre **1 y 30** y el usuario debe adivi
 
 # 📌 Práctica 2: Programación Orientada a Objetos en Kotlin  
 
+🔗 [Repositorio de la práctica](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/tree/main/Practica%201%20-%20Introduccion%20a%20Kotlin)  
+
+Esta práctica tiene como objetivo aplicar los conceptos de **Programación Orientada a Objetos (POO)** en **Kotlin**, incluyendo el uso de **clases, herencia, interfaces y encapsulamiento**.  

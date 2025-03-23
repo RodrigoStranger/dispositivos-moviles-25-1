@@ -56,7 +56,7 @@ class Cuadrado(private var lado: Number) : Shape() {
         perimetro = 4 * lado.toDouble()
     }
 
-    // Método para imprimir los atributos del cuadrado
+    // Metodo para imprimir los atributos del cuadrado
     fun imprimirAtributos() {
         println("Atributos del Cuadrado:")
         println("Lado: $lado")

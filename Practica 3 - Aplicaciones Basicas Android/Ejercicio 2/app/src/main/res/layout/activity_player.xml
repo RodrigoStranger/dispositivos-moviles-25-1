@@ -123,8 +123,8 @@
 
         <ImageButton
             android:id="@+id/previous_button"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
+            android:layout_width="82dp"
+            android:layout_height="82dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_previous"
             android:tint="@color/white"
@@ -132,16 +132,16 @@
 
         <ImageButton
             android:id="@+id/play_pause_button"
-            android:layout_width="72dp"
-            android:layout_height="72dp"
+            android:layout_width="82dp"
+            android:layout_height="82dp"
             android:background="@drawable/round_button_background"
             android:src="@drawable/ic_play"
             android:padding="12dp"/>
 
         <ImageButton
             android:id="@+id/next_button"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
+            android:layout_width="82dp"
+            android:layout_height="82dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_next"
             android:tint="@color/white"

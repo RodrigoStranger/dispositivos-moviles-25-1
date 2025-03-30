@@ -10,8 +10,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <!-- Color de fondo principal del reproductor (gris muy oscuro, estilo Spotify) -->
-    <color name="player_background">#121212</color>
+    <!-- Color de fondo principal del reproductor (Midnight) -->
+    <color name="player_background">#122C4F</color>
 
     <!-- Color para el progreso de la barra de reproducción -->
     <color name="progress_color">#1DB954</color>

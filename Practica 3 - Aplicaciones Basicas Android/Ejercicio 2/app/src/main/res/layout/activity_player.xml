@@ -76,8 +76,8 @@
         android:progressDrawable="@drawable/seekbar_progress"
         android:thumb="@drawable/seekbar_thumb"
         android:splitTrack="false"
-        android:minHeight="6dp"
-        android:maxHeight="6dp"
+        android:minHeight="8dp"
+        android:maxHeight="8dp"
         app:layout_constraintBottom_toTopOf="@id/time_container"/>
 
     <LinearLayout

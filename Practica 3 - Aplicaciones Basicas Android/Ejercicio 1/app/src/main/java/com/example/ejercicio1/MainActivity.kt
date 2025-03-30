@@ -5,7 +5,7 @@ package com.example.ejercicio1
     Curso: Programacion De Dispositivos Moviles
     Semestre: VI
     Fecha: 30/03/2025
-    Ultima modificacion: 30/03/2025 0:30 am
+    Ultima modificacion: 30/03/2025 0:35 am
 */
 
 /*
@@ -55,8 +55,8 @@ fun MainScreen() {
         contentAlignment = Alignment.Center
     ) {
         Image(
-            painter = painterResource(id = R.drawable.ic_launcher_foreground),
-            contentDescription = "Imagen clickeable",
+            painter = painterResource(id = R.drawable.cat),
+            contentDescription = "Imagen de un gato",
             modifier = Modifier
                 .size(200.dp)
                 .clickable {

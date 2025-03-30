@@ -15,7 +15,11 @@
 
 package com.example.ejercicio2
 
+import android.Manifest
+import android.content.pm.PackageManager
+import android.graphics.BitmapFactory
 import android.media.MediaPlayer
+import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -24,12 +28,16 @@ import android.widget.ImageView
 import android.widget.SeekBar
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import java.util.concurrent.TimeUnit
 
 class PlayerActivity : AppCompatActivity() {
 
     private lateinit var albumImageView: ImageView
-    private lateinit var audioNameTextView: TextView
+    private lateinit var songTitleTextView: TextView
+    private lateinit var artistNameTextView: TextView
+    private lateinit var albumNameTextView: TextView
     private lateinit var playPauseButton: ImageButton
     private lateinit var previousButton: ImageButton
     private lateinit var nextButton: ImageButton
@@ -43,22 +51,29 @@ class PlayerActivity : AppCompatActivity() {
     private var currentSongIndex = 0
     private var lastPreviousClickTime = 0L
     private val DOUBLE_CLICK_TIME_DELAY = 300L // 300 milisegundos para el doble clic
-
-    private val songs = arrayOf(
-        Song("Faded", R.raw.alan_walker_faded, R.drawable.audio_image_1),
-        Song("Blinding Lights", R.raw.the_weeknd_blinding_lights, R.drawable.audio_image_2),
-        Song("Save Your Tears", R.raw.the_weeknd_save_your_tears, R.drawable.audio_image_3),
-        Song("Con Calma", R.raw.daddyyankee_con_calma, R.drawable.audio_image_4),
-        Song("Shape of You", R.raw.ed_sheeran_shape_of_you, R.drawable.audio_image_5)
-    )
+    private lateinit var metadataExtractor: AudioMetadataExtractor
+    private lateinit var songs: Array<Song>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_player)
 
+        // Inicializar el extractor de metadatos
+        metadataExtractor = AudioMetadataExtractor(this)
+
+        // Verificar y solicitar permisos si es necesario
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)
+            != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this,
+                arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE),
+                STORAGE_PERMISSION_CODE)
+        }
+
         // Inicializar vistas
         albumImageView = findViewById(R.id.album_image)
-        audioNameTextView = findViewById(R.id.audio_name)
+        songTitleTextView = findViewById(R.id.song_title)
+        artistNameTextView = findViewById(R.id.artist_name)
+        albumNameTextView = findViewById(R.id.album_name)
         playPauseButton = findViewById(R.id.play_pause_button)
         previousButton = findViewById(R.id.previous_button)
         nextButton = findViewById(R.id.next_button)
@@ -124,8 +139,42 @@ class PlayerActivity : AppCompatActivity() {
             playNextSong()
         }
 
-        // Iniciar con la primera canción en pausa
-        loadSong(currentSongIndex)
+        // Cargar las canciones de la carpeta raw
+        loadSongsFromRaw()
+    }
+
+    private fun loadSongsFromRaw() {
+        // Obtener todos los recursos de tipo raw
+        val fields = R.raw::class.java.fields
+        val songList = mutableListOf<Song>()
+
+        for (field in fields) {
+            val resourceId = field.getInt(null)
+            val resourceName = field.name
+            val audioUri = Uri.parse("android.resource://$packageName/$resourceId")
+            
+            // Extraer metadatos de la canción
+            val metadata = metadataExtractor.extractMetadata(audioUri)
+            
+            // Crear objeto Song con los metadatos extraídos
+            val song = Song(
+                title = metadata.title,
+                artist = metadata.artist,
+                album = metadata.album,
+                audioResourceId = resourceId,
+                imageResourceId = R.drawable.default_image // Imagen por defecto
+            )
+            
+            songList.add(song)
+        }
+
+        // Convertir la lista a array
+        songs = songList.toTypedArray()
+
+        // Si hay canciones, cargar la primera
+        if (songs.isNotEmpty()) {
+            loadSong(currentSongIndex)
+        }
     }
 
     private fun loadSong(index: Int) {
@@ -139,9 +188,23 @@ class PlayerActivity : AppCompatActivity() {
             playNextSong()
         }
 
-        // Actualizar UI
-        albumImageView.setImageResource(songs[index].imageResourceId)
-        audioNameTextView.text = songs[index].title
+        // Extraer metadatos de la canción
+        val audioUri = Uri.parse("android.resource://$packageName/${songs[index].audioResourceId}")
+        val metadata = metadataExtractor.extractMetadata(audioUri)
+
+        // Actualizar UI con los metadatos extraídos
+        songTitleTextView.text = metadata.title
+        artistNameTextView.text = metadata.artist
+        albumNameTextView.text = metadata.album
+        
+        // Si hay una imagen de álbum, cargarla
+        metadata.albumArtPath?.let { path ->
+            albumImageView.setImageBitmap(BitmapFactory.decodeFile(path))
+        } ?: run {
+            // Si no hay imagen de álbum, usar la imagen por defecto
+            albumImageView.setImageResource(songs[index].imageResourceId)
+        }
+
         seekBar.max = mediaPlayer?.duration ?: 0
         seekBar.progress = 0
         currentTimeTextView.text = "0:00"
@@ -199,11 +262,18 @@ class PlayerActivity : AppCompatActivity() {
         mediaPlayer?.release()
         mediaPlayer = null
         handler.removeCallbacks(runnable)
+        metadataExtractor.release()
+    }
+
+    companion object {
+        private const val STORAGE_PERMISSION_CODE = 100
     }
 }
 
 data class Song(
     val title: String,
+    val artist: String,
+    val album: String,
     val audioResourceId: Int,
     val imageResourceId: Int
 )

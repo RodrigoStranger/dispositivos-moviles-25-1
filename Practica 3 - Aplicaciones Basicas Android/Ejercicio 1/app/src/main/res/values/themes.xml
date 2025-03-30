@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Archivo de recursos de temas que define el estilo visual de la aplicación -->
-<resources>
-    <!-- Tema principal de la aplicación que hereda del tema Material sin barra de acción -->
-    <style name="Theme.Ejercicio1" parent="android:Theme.Material.Light.NoActionBar" />
-</resources>

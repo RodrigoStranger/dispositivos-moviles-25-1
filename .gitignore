@@ -1,17 +1,1 @@
-# Ignorar la carpeta out (archivos compilados)
-out/
 
-# Ignorar archivos de compilación de Kotlin
-*.class
-*.jar
-*.war
-*.ear
-
-# Ignorar archivos de IntelliJ IDEA
-.idea/
-*.iml
-
-# Ignorar archivos de Gradle/Maven
-.gradle/
-build/
-target/

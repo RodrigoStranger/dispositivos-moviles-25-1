@@ -3,7 +3,7 @@
     Curso: Programacion De Dispositivos Moviles
     Semestre: VI
     Fecha: 29/03/2025
-    Ultima modificacion: 29/03/2025 21:55 pm
+    Ultima modificacion: 29/03/2025 22:00 pm
 */
 
 /*
@@ -24,7 +24,6 @@ import android.widget.ImageView
 import android.widget.SeekBar
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 import java.util.concurrent.TimeUnit
 
 class PlayerActivity : AppCompatActivity() {

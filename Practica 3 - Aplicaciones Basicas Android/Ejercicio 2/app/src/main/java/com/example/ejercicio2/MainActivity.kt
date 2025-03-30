@@ -61,9 +61,10 @@ class PlayerActivity : AppCompatActivity() {
     private var isPlaying = false
     private var currentSongIndex = 0
 
-    // Variables para el control de doble clic
+    // Variables para el control de doble clic y tiempo de reproducción
     private var lastPreviousClickTime = 0L
-    private val DOUBLE_CLICK_TIME_DELAY = 300L // Tiempo máximo entre clics para detectar doble clic
+    private val DOUBLE_CLICK_TIME_DELTA = 300L // Tiempo máximo entre clics (300ms)
+    private val RESTART_THRESHOLD = 2000 // Tiempo para reiniciar (2 segundos, como Spotify)
 
     // Herramientas para metadatos y gestión de canciones
     private lateinit var metadataExtractor: AudioMetadataExtractor
@@ -180,17 +181,66 @@ class PlayerActivity : AppCompatActivity() {
     }
 
     /**
-     * Maneja la lógica del botón anterior
-     * Detecta doble clic para cambiar de canción o reiniciar la actual
+     * Maneja la lógica del botón anterior al estilo Spotify:
+     * - Doble clic en cualquier momento -> Canción anterior
+     * - Un clic después de 2 segundos -> Reinicia canción actual
+     * - Un clic antes de 2 segundos -> Canción anterior
      */
     private fun handlePreviousButton() {
-        val currentTime = System.currentTimeMillis()
-        if (currentTime - lastPreviousClickTime < DOUBLE_CLICK_TIME_DELAY) {
+        val clickTime = System.currentTimeMillis()
+        
+        // Primero verificamos si es un doble clic
+        if (clickTime - lastPreviousClickTime < DOUBLE_CLICK_TIME_DELTA) {
+            // Es un doble clic, vamos a la canción anterior
             playPreviousSong()
-            lastPreviousClickTime = 0
-        } else {
-            lastPreviousClickTime = currentTime
-            restartCurrentSong()
+            lastPreviousClickTime = 0L // Resetear el tiempo del último clic
+            return
+        }
+        
+        // Si no es doble clic, verificamos el tiempo de reproducción
+        mediaPlayer?.let { player ->
+            try {
+                val currentPosition = player.currentPosition
+                if (currentPosition > RESTART_THRESHOLD) {
+                    // Si llevamos más de 2 segundos, reiniciamos la canción
+                    player.seekTo(0)
+                    if (!isPlaying) {
+                        playMusic()
+                    }
+                } else {
+                    // Si llevamos menos de 2 segundos, vamos a la canción anterior
+                    playPreviousSong()
+                }
+            } catch (e: IllegalStateException) {
+                // Si hay error, intentamos ir a la canción anterior
+                playPreviousSong()
+            }
+        } ?: run {
+            // Si el MediaPlayer es null, intentamos ir a la canción anterior
+            playPreviousSong()
+        }
+        
+        // Actualizamos el tiempo del último clic
+        lastPreviousClickTime = clickTime
+    }
+
+    /**
+     * Reinicia la canción actual y asegura que esté reproduciendo
+     */
+    private fun restartCurrentSong() {
+        mediaPlayer?.let { player ->
+            try {
+                player.seekTo(0)
+                if (!player.isPlaying) {
+                    playMusic()
+                }
+            } catch (e: IllegalStateException) {
+                // Si hay error, recargamos la canción actual
+                loadAndPlaySong(currentSongIndex)
+            }
+        } ?: run {
+            // Si el MediaPlayer es null, recargamos la canción actual
+            loadAndPlaySong(currentSongIndex)
         }
     }
 
@@ -319,14 +369,6 @@ class PlayerActivity : AppCompatActivity() {
     private fun playPreviousSong() {
         currentSongIndex = if (currentSongIndex > 0) currentSongIndex - 1 else songs.size - 1
         loadAndPlaySong(currentSongIndex)
-    }
-
-    /**
-     * Reinicia la canción actual
-     */
-    private fun restartCurrentSong() {
-        mediaPlayer?.seekTo(0)
-        mediaPlayer?.start()
     }
 
     /**

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Ejercicio 2</string>
+    <string name="select_audio">Selecciona un audio</string>
+    <string name="select_button">Seleccionar</string>
+    <string name="play_button">Reproducir</string>
+    <string name="pause_button">Pausar</string>
+    <string name="back_button">Volver</string>
+
+    <string name="audio_1">Alan walker-Faded</string>
+    <string name="audio_2">The Weeknd-Blinding Lights</string>
+    <string name="audio_3">The Weeknd-Save Your Tears</string>
+    <string name="audio_4">Daddy Yankee-Con Calma</string>
+    <string name="audio_5">Ed Sheeran-Shape of You</string>
+
+</resources>

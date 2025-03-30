@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Archivo de recursos de colores que define la paleta de colores de la aplicación -->
 <resources>
+    <!-- Colores principales de la aplicación -->
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>

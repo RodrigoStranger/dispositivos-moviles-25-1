@@ -284,7 +284,7 @@ La aplicación debe tener:
 
 ---
 
-### 1️⃣ Editor de nota rápida
+### 2️⃣ Editor de nota rápida
 📌 **Instrucciones:**
 Permitir al usuario escribir una nota, enviarla a otra actividad para elegir compartirla o volver a editar.
 

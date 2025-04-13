@@ -2,7 +2,6 @@ package com.example.editordenotarapida
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -32,14 +31,11 @@ class OpcionesActivity : AppCompatActivity() {
             // Mostrar un Toast
             Toast.makeText(this, R.string.nota_compartida, Toast.LENGTH_SHORT).show()
 
-            // Después de 1 segundo, regresamos a EditorActivity
-            Handler().postDelayed({
-                val intent = Intent()
-                intent.putExtra("nota", nota)  // Pasamos la nota de vuelta
-                intent.putExtra("compartido", true)  // Indicamos que la nota fue compartida
-                setResult(RESULT_OK, intent)  // Indicamos que el resultado es correcto
-                finish()  // Esto cierra OpcionesActivity y regresa a EditorActivity
-            }, 1000)  // 1000 ms = 1 segundo (el tiempo que dura el Toast)
+            val intent = Intent()
+            intent.putExtra("nota", nota)  // Pasamos la nota de vuelta
+            intent.putExtra("compartido", true)  // Indicamos que la nota fue compartida
+            setResult(RESULT_OK, intent)  // Indicamos que el resultado es correcto
+            finish()  // Esto cierra OpcionesActivity y regresa a EditorActivity
         }
 
         // Acción para regresar a la actividad anterior (EditorActivity)

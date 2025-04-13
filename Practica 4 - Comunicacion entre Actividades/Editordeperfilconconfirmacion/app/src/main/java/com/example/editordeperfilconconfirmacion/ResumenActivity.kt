@@ -16,7 +16,7 @@ class ResumenActivity : AppCompatActivity() {
         setContentView(R.layout.resumen_activity) // Establecemos el layout de la actividad
 
         // Obtener el objeto Usuario enviado a través del Intent
-        val usuario: Usuario? = intent.getParcelableExtra("usuario")
+        val usuario: Usuario? = intent.getParcelableExtra("usuario") // ESTOY EN ANDROID 10 XD
 
         // Si el objeto Usuario es null, mostramos un mensaje
         if (usuario != null) {

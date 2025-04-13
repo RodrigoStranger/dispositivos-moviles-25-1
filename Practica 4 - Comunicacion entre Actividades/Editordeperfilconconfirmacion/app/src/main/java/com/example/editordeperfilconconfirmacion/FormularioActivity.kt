@@ -100,8 +100,8 @@ class FormularioActivity : AppCompatActivity() {
         return try {
             val edadInt = edad.toInt()
             edadInt in 1..99
-        } catch (e: NumberFormatException) {
-            false
+        } catch (_: NumberFormatException) {
+            false  // Si la conversión a entero falla, se retorna false
         }
     }
 

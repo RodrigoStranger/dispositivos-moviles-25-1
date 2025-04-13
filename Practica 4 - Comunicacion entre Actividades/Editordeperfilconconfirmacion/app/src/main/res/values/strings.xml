@@ -8,6 +8,7 @@
     <string name="hint_correo">Correo Electrónico</string>
     <string name="boton_continuar">Continuar</string>
 
+    <string name="resumen_datos">Resumen de Datos</string>
     <!-- Texto de la segunda actividad (Resumen) -->
     <string name="resumen_title">Resumen de tu perfil</string>
     <!-- Cadenas con placeholders para mostrar los datos del usuario -->

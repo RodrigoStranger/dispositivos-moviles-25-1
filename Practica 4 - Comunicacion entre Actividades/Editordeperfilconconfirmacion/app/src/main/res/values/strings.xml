@@ -1,3 +1,23 @@
 <resources>
+    <!-- Texto de la primera actividad (formulario) -->
     <string name="app_name">Editor de perfil con confirmacion</string>
+    <string name="titulo_formulario">Formulario</string>
+    <string name="hint_nombre">Nombre</string>
+    <string name="hint_edad">Edad</string>
+    <string name="hint_ciudad">Ciudad</string>
+    <string name="hint_correo">Correo Electrónico</string>
+    <string name="boton_continuar">Continuar</string>
+
+    <!-- Texto de la segunda actividad (Resumen) -->
+    <string name="resumen_title">Resumen de tu perfil</string>
+    <!-- Cadenas con placeholders para mostrar los datos del usuario -->
+    <string name="texto_nombre">Nombre: %1$s</string>
+    <string name="texto_edad">Edad: %1$s</string>
+    <string name="texto_ciudad">Ciudad: %1$s</string>
+    <string name="texto_correo">Correo: %1$s</string>
+    <!-- Mensaje cuando el perfil es guardado -->
+    <string name="perfil_guardado">Perfil guardado correctamente</string>
+    <!-- Botones -->
+    <string name="confirmar">Confirmar</string>
+    <string name="volver_a_editar">Volver a editar</string>
 </resources>

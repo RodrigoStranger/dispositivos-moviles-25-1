@@ -5,7 +5,7 @@ package com.example.editordeperfilconconfirmacion
     Curso: Programacion De Dispositivos Moviles
     Semestre: VI
     Fecha: 13/04/2025
-    Ultima modificacion: 13/04/2025 12:53pm
+    Ultima modificacion: 13/04/2025 13:00pm
 */
 
 /*
@@ -32,7 +32,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.editordeperfilconconfirmacion.model.Usuario
 
-class FormActivity : AppCompatActivity() {
+class FormularioActivity : AppCompatActivity() {
 
     private lateinit var editTextNombre: EditText
     private lateinit var editTextEdad: EditText
@@ -41,7 +41,7 @@ class FormActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.form_activity)
+        setContentView(R.layout.formulario_activity)
 
         // Obtener las referencias a los campos y el botón
         editTextNombre = findViewById(R.id.editTextNombre)

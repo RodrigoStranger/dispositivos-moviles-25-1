@@ -13,7 +13,7 @@ class ResumenActivity : AppCompatActivity() {
     // Metodo onCreate que se ejecuta cuando la actividad es creada
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_resumen) // Establecemos el layout de la actividad
+        setContentView(R.layout.resumen_activity) // Establecemos el layout de la actividad
 
         // Obtener el objeto Usuario enviado a través del Intent
         val usuario: Usuario? = intent.getParcelableExtra("usuario")
@@ -37,7 +37,7 @@ class ResumenActivity : AppCompatActivity() {
         val btnConfirmar: Button = findViewById(R.id.btnConfirmar)
         btnConfirmar.setOnClickListener {
             // Volver a la primera pantalla (FormActivity) y mostrar el Toast
-            val intent = Intent(this, FormActivity::class.java)
+            val intent = Intent(this, FormularioActivity::class.java)
             startActivity(intent)
             Toast.makeText(this, getString(R.string.perfil_guardado), Toast.LENGTH_SHORT).show()
         }

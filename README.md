@@ -280,4 +280,37 @@ La aplicación debe tener:
 - Muestra los datos con TextView en la segunda pantalla.
 - Asegúrate de restaurar los campos en FormularioActivity si la pantalla se rota.
 
+🔗 [Ejercicio desarrollado](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/tree/main/Practica%204%20-%20Comunicacion%20entre%20Actividades/Editordeperfilconconfirmacion)
+
+---
+
+### 1️⃣ Editor de nota rápida
+📌 **Instrucciones:**
+Permitir al usuario escribir una nota, enviarla a otra actividad para elegir compartirla o volver a editar.
+
+
+La aplicación debe tener:
+
+
+🧩 Actividad 1 – EditorActivity
+- Un campo de texto (EditText) para escribir una nota.
+- Un botón que diga “Compartir”
+- Al presionar, la nota se manda a otra pantalla.
+
+
+🧩 OpcionesActivity
+- Muestra la nota recibida.
+- Tiene dos botones: “Compartir por correo” (muestra un Toast que diga “Compartido por correo”) y “Editar de nuevo” (vuelve a la pantalla anterior con el texto para seguir escribiendo).
+
+📍 **Se debe usar:**
+- Comunicación de datos entre actividades.
+- Envío de información de regreso usando ActivityResult.
+- Guardar el contenido de la nota si se rota la pantalla con onSaveInstanceState().
+
+🧠 **Tips útiles:**
+- Usa Intent.putExtra("nota", texto) para enviar y setResult para regresar.
+- Usa onSaveInstanceState() para que el texto no se pierda en caso de rotar el dispositivo.
+
+🔗 [Ejercicio desarrollado](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/tree/main/Practica%204%20-%20Comunicacion%20entre%20Actividades/Editordenotarapida)
+
 ---

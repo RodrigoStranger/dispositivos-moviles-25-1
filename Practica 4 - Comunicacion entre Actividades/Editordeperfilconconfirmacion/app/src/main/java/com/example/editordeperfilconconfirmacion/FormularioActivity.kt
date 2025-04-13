@@ -34,13 +34,16 @@ import com.example.editordeperfilconconfirmacion.model.Usuario
 
 class FormularioActivity : AppCompatActivity() {
 
+    // Declaramos las variables para los campos EditText donde el usuario ingresará los datos
     private lateinit var editTextNombre: EditText
     private lateinit var editTextEdad: EditText
     private lateinit var editTextCiudad: EditText
     private lateinit var editTextCorreo: EditText
 
+    // Metodo onCreate que se ejecuta cuando la actividad es creada
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Establecemos el layout para esta actividad, que contiene los campos de entrada del formulario
         setContentView(R.layout.formulario_activity)
 
         // Obtener las referencias a los campos y el botón

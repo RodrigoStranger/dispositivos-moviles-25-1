@@ -26,6 +26,7 @@
     <string name="error_edad_invalida">Ingrese una edad válida</string>
     <string name="error_ciudad_invalida">Ingrese una ciudad válida</string>
     <string name="error_correo_invalido">Correo no válido</string>
+    <string name="error_nombre_invalido">Ingrese un nombre válido</string>
 
     <!-- Claves de almacenamiento del estado -->
     <string name="key_nombre">nombre</string>

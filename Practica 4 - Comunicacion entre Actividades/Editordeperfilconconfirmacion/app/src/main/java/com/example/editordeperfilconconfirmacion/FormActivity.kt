@@ -5,7 +5,7 @@ package com.example.editordeperfilconconfirmacion
     Curso: Programacion De Dispositivos Moviles
     Semestre: VI
     Fecha: 13/04/2025
-    Ultima modificacion: 13/04/2025 12:46pm
+    Ultima modificacion: 13/04/2025 12:53pm
 */
 
 /*
@@ -41,7 +41,7 @@ class FormActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.form_activity)  // Usa el XML para el diseño
+        setContentView(R.layout.form_activity)
 
         // Obtener las referencias a los campos y el botón
         editTextNombre = findViewById(R.id.editTextNombre)
@@ -49,6 +49,14 @@ class FormActivity : AppCompatActivity() {
         editTextCiudad = findViewById(R.id.editTextCiudad)
         editTextCorreo = findViewById(R.id.editTextCorreo)
         val btnContinuar: Button = findViewById(R.id.btnContinuar)
+
+        // Si hay un estado guardado, restaurar los valores
+        if (savedInstanceState != null) {
+            editTextNombre.setText(savedInstanceState.getString("nombre"))
+            editTextEdad.setText(savedInstanceState.getString("edad"))
+            editTextCiudad.setText(savedInstanceState.getString("ciudad"))
+            editTextCorreo.setText(savedInstanceState.getString("correo"))
+        }
 
         // Acción cuando el botón "Continuar" es presionado
         btnContinuar.setOnClickListener {
@@ -100,4 +108,14 @@ class FormActivity : AppCompatActivity() {
         val regex = "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$"
         return correo.matches(regex.toRegex())
     }
+
+    // Guardar el estado de los campos cuando la pantalla se rota o la actividad se destruye
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putString("nombre", editTextNombre.text.toString())
+        outState.putString("edad", editTextEdad.text.toString())
+        outState.putString("ciudad", editTextCiudad.text.toString())
+        outState.putString("correo", editTextCorreo.text.toString())
+    }
+
 }

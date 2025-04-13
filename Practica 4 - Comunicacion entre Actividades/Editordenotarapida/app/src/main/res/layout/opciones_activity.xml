@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F4F9"
+    android:padding="20dp">
+
+    <!-- CardView para mostrar la nota -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardForm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- LinearLayout para organizar los elementos verticalmente -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center">
+
+            <!-- Título de la actividad -->
+            <TextView
+                android:id="@+id/tituloNotaRapida"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nota_guardada"
+                android:textSize="24sp"
+                android:textColor="#333333"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"/>
+
+            <!-- Muestra la nota -->
+            <TextView
+                android:id="@+id/textViewNota"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nota_recibida"
+                android:textSize="18sp"
+                android:textColor="#333333"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"/>
+
+            <!-- Botón para editar la nota de nuevo -->
+            <Button
+                android:id="@+id/buttonEditar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_editar"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"/>
+
+            <!-- Botón para compartir la nota por correo -->
+            <Button
+                android:id="@+id/buttonCompartirCorreo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_compartir"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/colorAccent"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

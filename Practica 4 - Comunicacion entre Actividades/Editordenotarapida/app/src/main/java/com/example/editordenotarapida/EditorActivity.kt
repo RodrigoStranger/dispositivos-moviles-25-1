@@ -44,9 +44,9 @@ class EditorActivity : AppCompatActivity() {
         editTextNota = findViewById(R.id.editTextNota)
         val btnCompartir: Button = findViewById(R.id.buttonCompartir)
 
-        // Si la actividad se reinicia (por ejemplo, por rotación), restauramos el texto
+        // Si la actividad se reinicia (por ejemplo, por rotación), restauramos el texto guardado
         if (savedInstanceState != null) {
-            val savedNota = savedInstanceState.getString("nota")
+            val savedNota = savedInstanceState.getString(R.string.key_nota.toString())
             editTextNota.setText(savedNota)
         }
 
@@ -56,11 +56,11 @@ class EditorActivity : AppCompatActivity() {
 
             // Verificamos si la nota está vacía
             if (nota.isEmpty()) {
-                Toast.makeText(this, "Por favor, ingresa una nota", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, R.string.error_nota_vacia, Toast.LENGTH_SHORT).show()
             } else {
                 // Enviar la nota a OpcionesActivity
                 val intent = Intent(this, OpcionesActivity::class.java)
-                intent.putExtra("nota", nota)
+                intent.putExtra(R.string.key_nota.toString(), nota)  // Pasamos la nota
 
                 // Llamamos a la actividad con la solicitud de resultado
                 startActivityForResult(intent, 1)
@@ -71,7 +71,7 @@ class EditorActivity : AppCompatActivity() {
     // Guardamos el contenido de la nota en el estado de la actividad
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        outState.putString("nota", editTextNota.text.toString())
+        outState.putString("nota", editTextNota.text.toString())  // Guardamos el texto de la nota
     }
 
     // Recibimos el resultado de OpcionesActivity
@@ -79,8 +79,15 @@ class EditorActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
 
         if (requestCode == 1 && resultCode == RESULT_OK) {
-            val nota = data?.getStringExtra("nota")
+            val nota = data?.getStringExtra(R.string.key_nota.toString())
+            val compartido = data?.getBooleanExtra( R.string.key_compartido.toString(), false)
+
             editTextNota.setText(nota)  // Actualizamos el EditText con la nota recibida
+
+            // Si la nota fue compartida, limpiamos el campo para ingresar una nueva
+            if (compartido == true) {
+                editTextNota.text.clear()  // Limpiar el campo
+            }
         }
     }
 }

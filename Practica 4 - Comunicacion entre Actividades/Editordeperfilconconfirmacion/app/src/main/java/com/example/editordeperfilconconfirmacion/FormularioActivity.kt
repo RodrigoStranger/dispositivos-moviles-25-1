@@ -14,14 +14,14 @@ package com.example.editordeperfilconconfirmacion
 
      Actividad 1 – FormularioActivity:
      - Cuatro campos para: Nombre, Edad, Ciudad, y Correo electrónico.
-     - Un botón que diga “Continuar”.
+     - Un botón que diga "Continuar".
      - Al presionarlo, se envían los datos a la segunda actividad
 
      Actividad 2 – ResumenActivity
     Muestra un resumen de los datos escritos.
     Tiene dos botones:
-    - “Confirmar” ( vuelve a la primera pantalla y aparece un Toast que diga “Perfil guardado correctamente).
-    - “Volver a editar” (vuelve a la pantalla anterior para seguir editando información).
+    - "Confirmar" ( vuelve a la primera pantalla y aparece un Toast que diga "Perfil guardado correctamente).
+    - "Volver a editar" (vuelve a la pantalla anterior para seguir editando información).
 */
 
 import android.content.Intent
@@ -72,7 +72,7 @@ class FormularioActivity : AppCompatActivity() {
                 val intent = Intent(this, ResumenActivity::class.java)
 
                 // Pasar el objeto Usuario al Intent
-                intent.putExtra(R.string.key_usuario.toString(), usuario) // Pasamos el objeto Usuario que esta definido en el string.xml
+                intent.putExtra("usuario", usuario)
 
                 // Lanzar ResumenActivity y esperar el resultado
                 startActivityForResult(intent, 1) // '1' es el código de solicitud
@@ -85,7 +85,7 @@ class FormularioActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
 
         if (requestCode == 1 && resultCode == RESULT_OK) {
-            val usuario = data?.getParcelableExtra<Usuario>(R.string.key_usuario.toString()) // Pasamos el objeto Usuario que esta definido en el string.xml
+            val usuario = data?.getParcelableExtra<Usuario>("usuario")
 
             if (usuario != null) {
                 // Rellenamos los campos con los datos recibidos

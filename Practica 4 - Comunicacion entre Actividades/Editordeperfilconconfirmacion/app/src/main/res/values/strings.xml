@@ -33,5 +33,4 @@
     <string name="key_edad">edad</string>
     <string name="key_ciudad">ciudad</string>
     <string name="key_correo">correo</string>
-    <string name="key_usuario">usuario</string>
 </resources>

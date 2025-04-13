@@ -14,7 +14,7 @@ class ResumenActivity : AppCompatActivity() {
         setContentView(R.layout.resumen_activity)
 
         // Recuperamos el objeto Usuario desde el Intent
-        val usuario = intent.getParcelableExtra<Usuario>(R.string.key_usuario.toString()) // Pasamos el objeto Usuario que esta definido en el string.xml
+        val usuario = intent.getParcelableExtra<Usuario>("usuario")
 
         // Si el objeto Usuario no es nulo, mostramos los datos
         if (usuario != null) {
@@ -34,7 +34,7 @@ class ResumenActivity : AppCompatActivity() {
             btnConfirmar.setOnClickListener {
                 // Crear el Intent para devolver los datos a FormularioActivity
                 val resultIntent = Intent()
-                resultIntent.putExtra(R.string.key_usuario.toString(), usuario) // Pasamos el objeto Usuario que esta definido en el string.xml
+                resultIntent.putExtra("usuario", usuario)
 
                 // Establecer el resultado y finalizar la actividad
                 setResult(RESULT_OK, resultIntent)

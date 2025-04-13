@@ -2,6 +2,7 @@ package com.example.editordeperfilconconfirmacion.model
 
 import android.os.Parcel
 import android.os.Parcelable
+//import kotlinx.parcelize.Parcelize
 
 // Hacemos que la clase Usuario implemente Parcelable
 data class Usuario(

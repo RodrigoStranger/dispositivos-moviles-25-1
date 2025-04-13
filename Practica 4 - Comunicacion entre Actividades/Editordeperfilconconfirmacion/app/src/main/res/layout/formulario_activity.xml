@@ -96,13 +96,13 @@
             <!-- Botón para continuar -->
             <Button
                 android:id="@+id/btnContinuar"
-                android:layout_width="match_parent"
+                android:layout_width="189dp"
                 android:layout_height="wrap_content"
-                android:text="@string/boton_continuar"
-                android:textColor="#FFFFFF"
+                android:layout_gravity="center"
                 android:backgroundTint="@color/colorAccent"
                 android:padding="12dp"
-                android:layout_gravity="center"/>
+                android:text="@string/boton_continuar"
+                android:textColor="#FFFFFF" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

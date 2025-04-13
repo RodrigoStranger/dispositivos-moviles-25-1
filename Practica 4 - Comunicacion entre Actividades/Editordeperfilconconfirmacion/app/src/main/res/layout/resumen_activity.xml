@@ -86,24 +86,24 @@
             <!-- Botón Confirmar -->
             <Button
                 android:id="@+id/btnConfirmar"
-                android:layout_width="match_parent"
+                android:layout_width="176dp"
                 android:layout_height="wrap_content"
-                android:text="@string/confirmar"
-                android:textColor="#FFFFFF"
+                android:layout_gravity="center"
                 android:backgroundTint="@color/colorAccent"
                 android:padding="12dp"
-                android:layout_gravity="center"/>
+                android:text="@string/confirmar"
+                android:textColor="#FFFFFF" />
 
             <!-- Botón Volver a editar -->
             <Button
                 android:id="@+id/btnVolverEditar"
-                android:layout_width="match_parent"
+                android:layout_width="176dp"
                 android:layout_height="wrap_content"
-                android:text="@string/volver_a_editar"
-                android:textColor="#FFFFFF"
+                android:layout_gravity="center"
                 android:backgroundTint="@color/colorAccent"
                 android:padding="12dp"
-                android:layout_gravity="center"/>
+                android:text="@string/volver_a_editar"
+                android:textColor="#FFFFFF" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

@@ -241,3 +241,43 @@ Esta práctica tiene como objetivo desarrollar aplicaciones básicas en Android 
 
 
 ---
+
+# 📌 Práctica 4: Comunicación entre Actividades
+
+Esta práctica tiene como objetivo el desarrollo de la comunicación entre actividades en Android utilizando Kotlin. Se resuelven dos ejercicios relacionados con el paso de datos entre actividades, el manejo de la rotación de la pantalla y el uso de `ActivityResult`.
+
+🔗 [Repositorio de la práctica](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/tree/main/Practica%204%20-%20Comunicacion%20entre%20Actividades)  
+
+## 🔹 Ejercicios  
+
+### 1️⃣ Editor de Perfil con Confirmación
+
+📌 **Instrucciones:**
+
+Crear una app que permita llenar un perfil de usuario, mostrar los datos en otra pantalla y confirmar si está correcto.
+
+
+La aplicación debe tener:
+
+
+🧩 Actividad 1 – FormularioActivity
+- Cuatro campos para: Nombre, Edad, Ciudad, y Correo electrónico.
+- Un botón que diga “Continuar”.
+- Al presionarlo, se envían los datos a la segunda actividad.
+
+
+🧩 Actividad 2 – ResumenActivity
+- Muestra un resumen de los datos escritos.
+- Tiene dos botones: “Confirmar” ( vuelve a la primera pantalla y aparece un Toast que diga “Perfil guardado correctamente) y “Volver a editar” (vuelve a la pantalla anterior para seguir editando información).
+
+📍 **Se debe usar:**
+- Envío de datos con Intent (usando una clase Usuario y Parcelable).
+- Envío de resultados de vuelta con ActivityResult.
+- Guardar los textos escritos si se gira la pantalla usando onSaveInstanceState().
+
+🧠 **Tips útiles:**
+- Puedes usar una data class Usuario(val nombre: String, ...) para enviar los datos.
+- Muestra los datos con TextView en la segunda pantalla.
+- Asegúrate de restaurar los campos en FormularioActivity si la pantalla se rota.
+
+---

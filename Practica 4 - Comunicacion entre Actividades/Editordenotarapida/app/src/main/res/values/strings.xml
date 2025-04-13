@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">Editor de nota rapida</string>
+    <!-- Título de la actividad -->
+    <string name="app_name">Editor de Nota</string>
+
+    <!-- Texto para el campo EditText -->
+    <string name="hint_nota">Escribe tu nota aquí</string>
+
+    <!-- Texto para el botón de compartir -->
+    <string name="button_compartir">Compartir</string>
+
+    <!-- Título centrado para la actividad -->
+    <string name="titulo_editor">Editor de Nota</string>
+
+
 </resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F4F9"
+    android:padding="20dp">
+
+    <!-- CardView para el formulario de notas con bordes redondeados y sombra -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardForm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- LinearLayout para organizar los elementos del formulario verticalmente -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center">
+
+            <!-- Título de la actividad (Editor de notas) -->
+            <TextView
+                android:id="@+id/tituloFormulario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/titulo_editor"
+                android:textSize="24sp"
+                android:textColor="#333333"
+                android:layout_marginBottom="20dp"
+                android:layout_gravity="center"/>
+
+            <!-- Campo para ingresar la nota -->
+            <EditText
+                android:id="@+id/editTextNota"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:hint="@string/hint_nota"
+                android:inputType="textMultiLine"
+                android:textColor="#000000"
+                android:background="@drawable/rounded_edittext"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="top|start"
+                android:importantForAccessibility="yes"
+                android:autofillHints="none"/>
+
+            <!-- Botón para compartir la nota -->
+            <Button
+                android:id="@+id/buttonCompartir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_compartir"
+                android:textSize="16sp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/colorAccent"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

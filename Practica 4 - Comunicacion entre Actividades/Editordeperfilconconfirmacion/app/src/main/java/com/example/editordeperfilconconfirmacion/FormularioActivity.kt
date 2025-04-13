@@ -34,7 +34,7 @@ import com.example.editordeperfilconconfirmacion.model.Usuario
 
 class FormularioActivity : AppCompatActivity() {
 
-    // Declaramos las variables para los campos EditText donde el usuario ingresará los datos
+    // Declaramos las variables para los campos de texto donde el usuario ingresará los datos
     private lateinit var editTextNombre: EditText
     private lateinit var editTextEdad: EditText
     private lateinit var editTextCiudad: EditText
@@ -46,79 +46,85 @@ class FormularioActivity : AppCompatActivity() {
         // Establecemos el layout para esta actividad, que contiene los campos de entrada del formulario
         setContentView(R.layout.formulario_activity)
 
-        // Obtener las referencias a los campos y el botón
+        // Inicializamos las variables con las referencias de los campos de entrada en el layout
         editTextNombre = findViewById(R.id.editTextNombre)
         editTextEdad = findViewById(R.id.editTextEdad)
         editTextCiudad = findViewById(R.id.editTextCiudad)
         editTextCorreo = findViewById(R.id.editTextCorreo)
+
+        // Referencia al botón de continuar
         val btnContinuar: Button = findViewById(R.id.btnContinuar)
 
-        // Si hay un estado guardado, restaurar los valores
+        // Si la actividad se ha reiniciado (por ejemplo, debido a un cambio de orientación),
+        // restauramos los valores de los campos de texto
         if (savedInstanceState != null) {
-            editTextNombre.setText(savedInstanceState.getString("nombre"))
-            editTextEdad.setText(savedInstanceState.getString("edad"))
-            editTextCiudad.setText(savedInstanceState.getString("ciudad"))
-            editTextCorreo.setText(savedInstanceState.getString("correo"))
+            // Usamos los recursos de strings.xml para asignar los "hint" (textos de ayuda) a los EditText
+            editTextNombre.hint = getString(R.string.hint_nombre)
+            editTextEdad.hint = getString(R.string.hint_edad)
+            editTextCiudad.hint = getString(R.string.hint_ciudad)
+            editTextCorreo.hint = getString(R.string.hint_correo)
         }
 
-        // Acción cuando el botón "Continuar" es presionado
+        // Configuramos la acción que ocurrirá cuando el botón "Continuar" sea presionado
         btnContinuar.setOnClickListener {
-            // Obtener los valores de los campos
+            // Obtenemos los valores ingresados en los campos de texto
             val nombre = editTextNombre.text.toString()
             val edad = editTextEdad.text.toString()
             val ciudad = editTextCiudad.text.toString()
             val correo = editTextCorreo.text.toString()
 
-            // Validaciones
+            // Validamos que todos los campos tengan datos
             if (nombre.isEmpty() || edad.isEmpty() || ciudad.isEmpty() || correo.isEmpty()) {
-                // Mostrar un mensaje si algún campo está vacío
-                Toast.makeText(this, "Por favor, completa todos los campos", Toast.LENGTH_SHORT).show()
+                // Si algún campo está vacío, mostramos un mensaje de error
+                Toast.makeText(this, getString(R.string.error_campos_vacios), Toast.LENGTH_SHORT).show()
             } else if (!validarEdad(edad)) {
-                // Validar que la edad esté entre 1 y 99
-                Toast.makeText(this, "Ingrese una edad válida", Toast.LENGTH_SHORT).show()
+                // Si la edad no es válida (no está en el rango de 1 a 99), mostramos un mensaje de error
+                Toast.makeText(this, getString(R.string.error_edad_invalida), Toast.LENGTH_SHORT).show()
             } else if (ciudad.matches(".*\\d.*".toRegex())) {
-                // Validación para la ciudad (no permitir números)
-                Toast.makeText(this, "Ingrese una ciudad válida", Toast.LENGTH_SHORT).show()
-                return@setOnClickListener
+                // Si la ciudad contiene números, no es válida y mostramos un mensaje de error
+                Toast.makeText(this, getString(R.string.error_ciudad_invalida), Toast.LENGTH_SHORT).show()
+                return@setOnClickListener // Si la ciudad no es válida, no continuamos con el proceso
             } else if (!validarCorreo(correo)) {
-                // Validar el correo
-                Toast.makeText(this, "Correo no válido", Toast.LENGTH_SHORT).show()
+                // Si el correo no tiene el formato correcto, mostramos un mensaje de error
+                Toast.makeText(this, getString(R.string.error_correo_invalido), Toast.LENGTH_SHORT).show()
             } else {
-                // Crear un objeto Usuario con los datos del formulario
+                // Si correcto, creamos un objeto Usuario con los datos ingresados
                 val usuario = Usuario(nombre, edad, ciudad, correo)
 
-                // Pasar el objeto Usuario a ResumenActivity a través del Intent
+                // Creamos un Intent para pasar los datos a la siguiente actividad
                 val intent = Intent(this, ResumenActivity::class.java)
-                intent.putExtra("usuario", usuario) // Pasamos el objeto Usuario
-                startActivity(intent)
+                // Pasamos el objeto Usuario a la otra actividad
+                intent.putExtra(getString(R.string.key_usuario), usuario)
+                startActivity(intent) // Iniciamos la nueva actividad
             }
         }
     }
 
-    // Función para validar la edad (debe estar entre 1 y 99)
+    // Función para validar que la edad esté entre 1 y 99
     private fun validarEdad(edad: String): Boolean {
         return try {
-            val edadInt = edad.toInt()
-            edadInt in 1..99
+            val edadInt = edad.toInt() // Convertimos el valor de la edad a entero
+            edadInt in 1..99 // Verificamos si está en el rango permitido
         } catch (_: NumberFormatException) {
-            false  // Si la conversión a entero falla, se retorna false
+            // Si ocurre un error al convertir la edad a entero, retornamos false
+            false
         }
     }
 
-    // Función para validar el correo (debe contener '@' y tener un dominio)
+    // Función para validar el formato del correo electrónico
     private fun validarCorreo(correo: String): Boolean {
-        // Expresión regular para validar el correo
+        // Usamos una expresión regular para validar el formato del correo
         val regex = "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$"
-        return correo.matches(regex.toRegex())
+        return correo.matches(regex.toRegex()) // Retornamos si el correo cumple con la expresión regular
     }
 
-    // Guardar el estado de los campos cuando la pantalla se rota o la actividad se destruye
+    // Función que se llama para guardar el estado de la actividad (por ejemplo, al rotar la pantalla)
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
-        outState.putString("nombre", editTextNombre.text.toString())
-        outState.putString("edad", editTextEdad.text.toString())
-        outState.putString("ciudad", editTextCiudad.text.toString())
-        outState.putString("correo", editTextCorreo.text.toString())
+        // Guardamos los valores de los campos de texto en el estado de la actividad
+        outState.putString(getString(R.string.key_nombre), editTextNombre.text.toString())
+        outState.putString(getString(R.string.key_edad), editTextEdad.text.toString())
+        outState.putString(getString(R.string.key_ciudad), editTextCiudad.text.toString())
+        outState.putString(getString(R.string.key_correo), editTextCorreo.text.toString())
     }
-
 }

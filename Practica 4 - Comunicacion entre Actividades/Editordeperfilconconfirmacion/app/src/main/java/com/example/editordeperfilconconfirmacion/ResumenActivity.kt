@@ -10,9 +10,10 @@ import com.example.editordeperfilconconfirmacion.model.Usuario
 
 class ResumenActivity : AppCompatActivity() {
 
+    // Metodo onCreate que se ejecuta cuando la actividad es creada
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_resumen)
+        setContentView(R.layout.activity_resumen) // Establecemos el layout de la actividad
 
         // Obtener el objeto Usuario enviado a través del Intent
         val usuario: Usuario? = intent.getParcelableExtra("usuario")

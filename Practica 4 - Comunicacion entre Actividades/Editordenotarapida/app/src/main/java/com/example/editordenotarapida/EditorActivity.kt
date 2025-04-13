@@ -14,15 +14,15 @@ package com.example.editordenotarapida
 
      Actividad 1 – EditorActivity
      - Un campo de texto (EditText) para escribir una nota.
-     - Un botón que diga “Compartir”.
+     - Un botón que diga "Compartir".
      - Al presionar, la nota se manda a otra pantalla.
 
 
      Actividad 2 – OpcionesActivity
      - Muestra la nota recibida.
      Tiene dos botones:
-     - “Compartir por correo” (muestra un Toast que diga “Compartido por correo”).
-     - “Editar de nuevo” (vuelve a la pantalla anterior con el texto para seguir escribiendo).
+     - "Compartir por correo" (muestra un Toast que diga "Compartido por correo").
+     - "Editar de nuevo" (vuelve a la pantalla anterior con el texto para seguir escribiendo).
 */
 
 import android.content.Intent
@@ -46,7 +46,7 @@ class EditorActivity : AppCompatActivity() {
 
         // Si la actividad se reinicia (por ejemplo, por rotación), restauramos el texto guardado
         if (savedInstanceState != null) {
-            val savedNota = savedInstanceState.getString(R.string.key_nota.toString())
+            val savedNota = savedInstanceState.getString("nota")
             editTextNota.setText(savedNota)
         }
 
@@ -60,7 +60,7 @@ class EditorActivity : AppCompatActivity() {
             } else {
                 // Enviar la nota a OpcionesActivity
                 val intent = Intent(this, OpcionesActivity::class.java)
-                intent.putExtra(R.string.key_nota.toString(), nota)  // Pasamos la nota
+                intent.putExtra("nota", nota)  // Pasamos la nota
 
                 // Llamamos a la actividad con la solicitud de resultado
                 startActivityForResult(intent, 1)
@@ -79,8 +79,8 @@ class EditorActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
 
         if (requestCode == 1 && resultCode == RESULT_OK) {
-            val nota = data?.getStringExtra(R.string.key_nota.toString())
-            val compartido = data?.getBooleanExtra( R.string.key_compartido.toString(), false)
+            val nota = data?.getStringExtra("nota")
+            val compartido = data?.getBooleanExtra("compartido", false)
 
             editTextNota.setText(nota)  // Actualizamos el EditText con la nota recibida
 

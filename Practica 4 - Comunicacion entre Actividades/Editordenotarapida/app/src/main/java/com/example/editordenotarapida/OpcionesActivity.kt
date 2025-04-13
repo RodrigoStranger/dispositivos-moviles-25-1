@@ -24,7 +24,7 @@ class OpcionesActivity : AppCompatActivity() {
         btnEditar = findViewById(R.id.buttonEditar)
 
         // Recibimos la nota desde la actividad anterior
-        val nota = intent.getStringExtra(R.string.key_nota.toString())
+        val nota = intent.getStringExtra("nota")
         textViewNota.text = nota  // Mostramos la nota en el TextView
 
         // Acción para compartir por correo (muestra un Toast y luego regresa a EditorActivity)

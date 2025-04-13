@@ -21,8 +21,4 @@
     <string name="nota_recibida">Nota recibida</string>"
     <string name="nota_compartida">Nota compartida</string>"
 
-    <!-- Llave para pasar la nota a la siguiente actividad y el compartido -->
-    <string name="key_nota">nota</string>
-    <string name="key_compartido">compartido</string>
-
 </resources>

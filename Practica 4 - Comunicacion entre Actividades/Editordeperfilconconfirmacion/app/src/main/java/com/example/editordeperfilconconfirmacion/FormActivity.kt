@@ -1,5 +1,29 @@
 package com.example.editordeperfilconconfirmacion
 
+/*
+    Autor: Rodrigo Emerson Infanzon Acosta
+    Curso: Programacion De Dispositivos Moviles
+    Semestre: VI
+    Fecha: 13/04/2025
+    Ultima modificacion: 13/04/2025 12:46pm
+*/
+
+/*
+     Crear una app que permita llenar un perfil de usuario,
+     mostrar los datos en otra pantalla y confirmar si está correcto.
+
+     Actividad 1 – FormularioActivity:
+     - Cuatro campos para: Nombre, Edad, Ciudad, y Correo electrónico.
+     - Un botón que diga “Continuar”.
+     - Al presionarlo, se envían los datos a la segunda actividad
+
+     Actividad 2 – ResumenActivity
+    Muestra un resumen de los datos escritos.
+    Tiene dos botones:
+    - “Confirmar” ( vuelve a la primera pantalla y aparece un Toast que diga “Perfil guardado correctamente).
+    - “Volver a editar” (vuelve a la pantalla anterior para seguir editando información).
+*/
+
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -40,7 +64,11 @@ class FormActivity : AppCompatActivity() {
                 Toast.makeText(this, "Por favor, completa todos los campos", Toast.LENGTH_SHORT).show()
             } else if (!validarEdad(edad)) {
                 // Validar que la edad esté entre 1 y 99
-                Toast.makeText(this, "La edad debe estar entre 1 y 99", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Ingrese una edad válida", Toast.LENGTH_SHORT).show()
+            } else if (ciudad.matches(".*\\d.*".toRegex())) {
+                // Validación para la ciudad (no permitir números)
+                Toast.makeText(this, "Ingrese una ciudad válida", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
             } else if (!validarCorreo(correo)) {
                 // Validar el correo
                 Toast.makeText(this, "Correo no válido", Toast.LENGTH_SHORT).show()

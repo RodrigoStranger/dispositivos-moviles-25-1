@@ -6,10 +6,17 @@
     <string name="hint_nota">Escribe tu nota aquí</string>
 
     <!-- Texto para el botón de compartir -->
-    <string name="button_compartir">Compartir</string>
+    <string name="button_compartir">Compartir por correo</string>
+
+    <string name="button_editar">Editar nota</string>
 
     <!-- Título centrado para la actividad -->
     <string name="titulo_editor">Editor de Nota</string>
 
+    <string name="error_nota_vacia">Por favor, escribe una nota antes de compartir</string>
+
+    <string name="nota_guardada">Nota guardada</string>"
+
+    <string name="nota_recibida">Nota recibida</string>"
 
 </resources>

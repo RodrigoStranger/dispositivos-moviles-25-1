@@ -42,6 +42,8 @@ android {
 dependencies {
     implementation ("androidx.constraintlayout:constraintlayout:2.2.1")
     implementation ("androidx.cardview:cardview:1.0.0")
+    implementation ("androidx.appcompat:appcompat:1.7.0")
+    implementation ("org.jetbrains.kotlin:kotlin-stdlib:2.0.21")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)

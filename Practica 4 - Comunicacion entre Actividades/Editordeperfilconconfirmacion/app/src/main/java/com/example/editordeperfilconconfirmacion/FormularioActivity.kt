@@ -34,6 +34,7 @@ import com.example.editordeperfilconconfirmacion.model.Usuario
 
 class FormularioActivity : AppCompatActivity() {
 
+    // Variables para el formulario
     private lateinit var editTextNombre: EditText
     private lateinit var editTextEdad: EditText
     private lateinit var editTextCiudad: EditText

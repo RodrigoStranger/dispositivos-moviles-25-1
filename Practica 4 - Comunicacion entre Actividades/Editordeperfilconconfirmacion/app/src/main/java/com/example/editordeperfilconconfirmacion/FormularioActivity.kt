@@ -5,7 +5,7 @@ package com.example.editordeperfilconconfirmacion
     Curso: Programacion De Dispositivos Moviles
     Semestre: VI
     Fecha: 13/04/2025
-    Ultima modificacion: 13/04/2025 13:00pm
+    Ultima modificacion: 13/04/2025 15:09pm
 */
 
 /*

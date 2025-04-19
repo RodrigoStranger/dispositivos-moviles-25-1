@@ -50,7 +50,7 @@ La aplicación debe tener:
 - Al presionar, la nota se manda a otra pantalla.
 
 
-🧩 OpcionesActivity
+🧩 Actividad 2 - OpcionesActivity
 - Muestra la nota recibida.
 - Tiene dos botones: “Compartir por correo” (muestra un Toast que diga “Compartido por correo”) y “Editar de nuevo” (vuelve a la pantalla anterior con el texto para seguir escribiendo).
 

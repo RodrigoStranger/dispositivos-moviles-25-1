@@ -1,7 +1,5 @@
 # Práctica 1: Introducción a Kotlin
 
-Esta práctica tiene como objetivo familiarizarse con el lenguaje de programación **Kotlin** a través de ejercicios básicos de lógica de programación. Se trabajará con estructuras condicionales, bucles, generación de números aleatorios y operaciones matemáticas.
-
 ## Ejercicios
 
 ### 1️⃣ Evaluación de empleados

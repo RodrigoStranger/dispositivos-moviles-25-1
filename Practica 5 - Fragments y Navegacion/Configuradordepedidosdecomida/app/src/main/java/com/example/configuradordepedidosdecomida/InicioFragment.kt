@@ -10,7 +10,8 @@ class InicioFragment : Fragment(R.layout.fragment_inicio) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         
-        val btnNuevoPedido = view.findViewById<Button>(R.id.btnAgregarPedido)
+        // Paso de datos hacia adelante con navigate() - Navegación simple sin datos
+        val btnNuevoPedido = view.findViewById<Button>(R.id.Btn_NuevoPedido)
         btnNuevoPedido.setOnClickListener {
             findNavController().navigate(R.id.action_inicioFragment_to_seleccionComidaFragment)
         }

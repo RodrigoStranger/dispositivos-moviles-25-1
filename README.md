@@ -7,50 +7,50 @@
 
 ---
 
-## Prácticas del Curso
+## 📌 Prácticas del Curso
 
-Este repositorio contiene los ejercicios correspondientes al curso de **Programación para Dispositivos Móviles**. Cada práctica aborda un conjunto de ejercicios que van desde conceptos básicos de Kotlin hasta la creación de aplicaciones en Android utilizando Kotlin.
+### **Práctica 1: Introducción a Kotlin**
+🔍 **Objetivo**: Familiarizarse con el lenguaje de programación **Kotlin** y trabajar con estructuras de control básicas, operaciones matemáticas y generación de números aleatorios.
 
-### 📌 [Práctica 1: Introducción a Kotlin](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/tree/main/Practica%201%20-%20Introduccion%20a%20Kotlin)
+💡 **Ejercicios de esta práctica**:
+- **Evaluación de empleados**: Calcular un bono de empleado basado en su puntuación de desempeño.
+- **Piedra, papel o tijeras**: Crear el clásico juego donde el usuario juega contra la computadora.
+- **Calculadora elemental**: Desarrollar una calculadora básica que maneje las operaciones aritméticas.
+- **Adivina el número**: Implementar un juego donde el usuario tiene que adivinar un número aleatorio generado por el sistema.
 
-Esta práctica tiene como objetivo familiarizarse con el lenguaje de programación **Kotlin** a través de ejercicios básicos de lógica de programación. Los ejercicios cubren estructuras condicionales, bucles, generación de números aleatorios y operaciones matemáticas.
-
-#### Ejercicios de la práctica:
-1. **Evaluación de empleados**: Calcular un bono de empleado basado en su puntuación de desempeño.
-2. **Piedra, papel o tijeras**: Implementar el clásico juego contra la computadora.
-3. **Calculadora elemental**: Desarrollar una calculadora básica con las cuatro operaciones aritméticas.
-4. **Adivina el número**: Crear un juego donde el usuario debe adivinar un número aleatorio generado por el sistema.
-
----
-
-### 📌 [Práctica 2: Programación Orientada a Objetos en Kotlin](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/tree/main/Practica%202%20-%20Programacion%20Orientada%20a%20Objetos%20Kotlin)
-
-Esta práctica tiene como objetivo aplicar los conceptos de **Programación Orientada a Objetos (POO)** en **Kotlin**, incluyendo el uso de **clases, herencia, interfaces y encapsulamiento**.
-
-#### Ejercicios de la práctica:
-1. **Cuenta Bancaria**: Crear una clase para gestionar cuentas bancarias con un saldo y un límite de retiro.
-2. **Producto**: Implementar una clase que permita gestionar el precio de un producto y calcular su precio final con un descuento aplicado.
-3. **Figuras**: Crear una clase abstracta `Shape` con subclases `Cuadrado`, `Círculo`, y `Rectángulo` para calcular área y perímetro.
-4. **Sistema de Gestión de Biblioteca**: Diseñar un sistema para gestionar el préstamo de libros y revistas en una biblioteca, con clases e interfaces correspondientes.
+🔗 **[Explicación detallada](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/tree/main/Practica%201%20-%20Introduccion%20a%20Kotlin)**
 
 ---
 
-### 📌 [Práctica 3: Aplicaciones Básicas Android](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/tree/main/Practica%203%20-%20Aplicaciones%20Basicas%20Android)
+### **Práctica 2: Programación Orientada a Objetos en Kotlin**
+🔍 **Objetivo**: Aplicar los conceptos de **Programación Orientada a Objetos (POO)** en **Kotlin** utilizando clases, herencia, interfaces y encapsulamiento.
 
-Esta práctica tiene como objetivo desarrollar aplicaciones básicas en **Android** que interactúan con imágenes y reproducen audio utilizando Kotlin.
+💡 **Ejercicios de esta práctica**:
+- **Cuenta Bancaria**: Crear una clase para gestionar cuentas bancarias con un saldo y un límite de retiro.
+- **Producto**: Implementar una clase que permita gestionar el precio de un producto y calcular su precio final con un descuento aplicado.
+- **Figuras**: Crear una clase abstracta `Shape` y subclases para calcular el área y perímetro de formas geométricas.
+- **Sistema de Gestión de Biblioteca**: Diseñar un sistema para gestionar el préstamo de libros y revistas en una biblioteca.
 
-#### Ejercicios de la práctica:
-1. **Interacción con Imágenes**: Crear una actividad que permita al usuario hacer clic en una imagen para mostrar un mensaje.
-2. **Reproductor de Música Básico**: Desarrollar una aplicación con controles para reproducir, pausar y detener música.
+🔗 **[Explicación detallada](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/tree/main/Practica%202%20-%20Programacion%20Orientada%20a%20Objetos%20Kotlin)**
+
+---
+
+### **Práctica 3: Aplicaciones Básicas Android**
+🔍 **Objetivo**: Desarrollar aplicaciones básicas en **Android** que interactúan con imágenes y reproducen audio utilizando **Kotlin**.
+
+💡 **Ejercicios de esta práctica**:
+- **Interacción con Imágenes**: Crear una actividad que permita al usuario hacer clic en una imagen para mostrar un mensaje.
+- **Reproductor de Música Básico**: Desarrollar una aplicación con controles para reproducir, pausar y detener música.
+
+🔗 **[Explicación detallada](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/tree/main/Practica%203%20-%20Aplicaciones%20Basicas%20Android)**
 
 ---
 
-### 📌 [Práctica 4: Comunicación entre Actividades](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/tree/main/Practica%204%20-%20Comunicacion%20entre%20Actividades)
+### **Práctica 4: Comunicación entre Actividades**
+🔍 **Objetivo**: Aprender a gestionar la comunicación entre actividades en **Android** y manejar la rotación de pantalla utilizando **Kotlin**.
 
-Esta práctica tiene como objetivo enseñar cómo manejar la comunicación entre diferentes actividades en **Android**. Se abordan técnicas para pasar datos entre actividades, manejar la rotación de pantalla y usar `ActivityResult`.
+💡 **Ejercicios de esta práctica**:
+- **Editor de Perfil con Confirmación**: Crear una app que permita al usuario completar un perfil, mostrarlo en otra actividad y confirmar si es correcto.
+- **Editor de Nota Rápida**: Crear una aplicación para escribir una nota, enviarla a otra actividad para compartirla o editarla nuevamente.
 
-#### Ejercicios de la práctica:
-1. **Editor de Perfil con Confirmación**: Crear una app que permita al usuario completar un perfil, mostrarlo en otra actividad y confirmar si es correcto.
-2. **Editor de Nota Rápida**: Crear una aplicación para escribir una nota, enviarla a otra actividad para compartirla o editarla nuevamente.
-
----
+🔗 **[Explicación detallada](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/tree/main/Practica%204%20-%20Comunicacion%20entre%20Actividades)**

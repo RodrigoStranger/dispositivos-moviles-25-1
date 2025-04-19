@@ -54,3 +54,14 @@
 - **Editor de Nota Rápida**: Crear una aplicación para escribir una nota, enviarla a otra actividad para compartirla o editarla nuevamente.
 
 🔗 **[Explicación detallada](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/tree/main/Practica%204%20-%20Comunicacion%20entre%20Actividades)**
+
+---
+
+## Práctica 5: Fragments y Navegación
+
+🔍 **Objetivo**: El objetivo de esta práctica es comprender y aplicar el uso de **Fragments** en Android, gestionando la navegación entre diferentes pantallas dentro de la misma actividad utilizando el **Navigation Component**. Además, se aprenderá a pasar datos entre fragments y cómo gestionar la pila de fragments (back stack).
+
+💡 **Ejercicios de esta práctica**:
+- **Configurador de pedidos de comida**: Permitir al usuario armar un pedido paso a paso y visualizarlo al final.
+
+🔗 **[Explicación detallada](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/tree/main/Practica%205%20-%20Fragments%20y%20Navegacion)**

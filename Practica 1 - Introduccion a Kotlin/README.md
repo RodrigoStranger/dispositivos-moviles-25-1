@@ -26,7 +26,7 @@ El dinero extra se calcula con la fórmula:
 **Entrada:** Salario = `10,000`, Puntuación = `8`  
 **Salida:** Nivel de Rendimiento: `Meritorio`, Dinero Recibido: `$8,000`
 
-🔗 [Código desarrollado](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/blob/main/Practica%201%20-%20Introduccion%20a%20Kotlin/Evaluacion%20de%20empleados.kt)
+🔗 [Ejercicio desarrollado](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/blob/main/Practica%201%20-%20Introduccion%20a%20Kotlin/Evaluacion%20de%20empleados.kt)
 
 ---
 
@@ -43,7 +43,7 @@ Se implementará el clásico juego **Piedra, Papel o Tijeras**, donde el usuario
 **Entrada:** Usuario = `Piedra`, Computadora = `Tijeras`  
 **Salida:** `Ganaste!!!`  
 
-🔗 [Código desarrollado](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/blob/main/Practica%201%20-%20Introduccion%20a%20Kotlin/Piedra%2C%20papel%20o%20tijeras.kt)
+🔗 [Ejercicio desarrollado](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/blob/main/Practica%201%20-%20Introduccion%20a%20Kotlin/Piedra%2C%20papel%20o%20tijeras.kt)
 
 ---
 
@@ -71,7 +71,7 @@ Se desarrollará una calculadora con las **cuatro operaciones básicas**:
 **Entrada:** Opción = `1 (Suma)`, Números = `4 y 6`  
 **Salida:** `Resultado: 10`
 
-🔗 [Código desarrollado](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/blob/main/Practica%201%20-%20Introduccion%20a%20Kotlin/Calculadora%20elemental.kt)
+🔗 [Ejercicio desarrollado](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/blob/main/Practica%201%20-%20Introduccion%20a%20Kotlin/Calculadora%20elemental.kt)
 
 ---
 
@@ -90,6 +90,4 @@ El programa genera un número aleatorio entre **1 y 30** y el usuario debe adivi
 **Entrada:** Usuario = `15`, Número Secreto = `20`  
 **Salida:** `El número es mayor. Intenta de nuevo.`
 
-🔗 [Código desarrollado](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/blob/main/Practica%201%20-%20Introduccion%20a%20Kotlin/Adivina%20el%20numero.kt)
-
----
+🔗 [Ejercicio desarrollado](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/blob/main/Practica%201%20-%20Introduccion%20a%20Kotlin/Adivina%20el%20numero.kt)

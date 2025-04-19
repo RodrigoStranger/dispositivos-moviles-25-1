@@ -7,6 +7,7 @@
 
     <!-- Recursos Generales -->
     <string name="siguiente">Siguiente</string>
+    <string name="Error">Debes seleccionar una opción</string>
 
     <!-- Recursos para Fragmento SeleccionComida -->
     <string name="seleccion_comida">Selecciona tu comida</string>

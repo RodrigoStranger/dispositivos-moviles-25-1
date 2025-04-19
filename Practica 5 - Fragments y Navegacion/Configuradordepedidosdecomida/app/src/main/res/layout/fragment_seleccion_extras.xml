@@ -1,14 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
     tools:context=".SeleccionExtrasFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <!-- Título de selección de extras -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/txtSeleccionExtras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/seleccion_extras"
+        android:textSize="18sp"
+        android:layout_marginBottom="20dp" />
 
-</FrameLayout>
+    <!-- Opciones de extras -->
+    <RadioGroup
+        android:id="@+id/radioGroupExtras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp">
+
+        <RadioButton
+            android:id="@+id/radioGaseosa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gaseosa" />
+
+        <RadioButton
+            android:id="@+id/radioEnsalada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ensalada" />
+
+        <RadioButton
+            android:id="@+id/radioPostre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/postre" />
+
+        <RadioButton
+            android:id="@+id/radioPapasFritas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/papas_fritas" />
+
+        <RadioButton
+            android:id="@+id/radioNingunExtra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ningun_extra" />
+    </RadioGroup>
+
+    <!-- Botón para continuar -->
+    <Button
+        android:id="@+id/btnSiguiente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/siguiente" />
+
+</LinearLayout>

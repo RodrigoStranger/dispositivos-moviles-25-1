@@ -1,5 +1,32 @@
 <resources>
     <string name="app_name">Configurador de pedidos de comida</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Recursos para Fragmento Inicio -->
+    <string name="Btn_NuevoPedido">Nuevo Pedido</string>
+
+    <!-- Recursos Generales -->
+    <string name="siguiente">Siguiente</string>
+
+    <!-- Recursos para Fragmento SeleccionComida -->
+    <string name="seleccion_comida">Selecciona tu comida</string>
+    <string name="pizza">Pizza</string>
+    <string name="hamburguesa">Hamburguesa</string>
+    <string name="tacos">Tacos</string>
+
+    <!-- Recursos para Fragmento SeleccionExtras -->
+    <string name="seleccion_extras">Selecciona tus extras</string>
+    <string name="gaseosa">Gaseosa</string>
+    <string name="ensalada">Ensalada</string>
+    <string name="postre">Postre</string>
+    <string name="papas_fritas">Papas fritas</string>
+    <string name="ningun_extra">Ningún extra</string>
+
+    <!-- Recursos para Fragmento ResumenPedido -->
+    <string name="resumen_pedido">Resumen de tu pedido</string>
+    <string name="confirmar_pedido">Confirmar pedido</string>
+    <string name="editar_pedido">Editar pedido</string>
+    <string name="mensaje_confirmacion">¡Tu pedido ha sido confirmado!</string>
+    <string name="comida">Comida: %1$s</string>
+    <string name="extras">Extras: %1$s</string>
 </resources>

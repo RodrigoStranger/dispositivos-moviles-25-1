@@ -1,14 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
     tools:context=".ResumenPedidoFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <!-- Título de Resumen de Pedido -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/txtResumenPedido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/resumen_pedido"
+        android:textSize="20sp"
+        android:layout_marginBottom="20dp"
+        android:textStyle="bold"
+        android:gravity="center"/>
 
-</FrameLayout>
+    <!-- Mostrar comida seleccionada -->
+    <TextView
+        android:id="@+id/txtComida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/comida"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"/>
+
+    <!-- Mostrar extras seleccionados -->
+    <TextView
+        android:id="@+id/txtExtras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/extras"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"/>
+
+    <!-- Botón Editar pedido -->
+    <Button
+        android:id="@+id/btnEditarPedido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/editar_pedido"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Botón Confirmar pedido -->
+    <Button
+        android:id="@+id/btnConfirmarPedido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/confirmar_pedido" />
+
+</LinearLayout>

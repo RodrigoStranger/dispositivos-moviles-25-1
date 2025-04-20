@@ -28,7 +28,7 @@
 💡 **Ejercicios de esta práctica**:
 - **Cuenta Bancaria**: Crear una clase para gestionar cuentas bancarias con un saldo y un límite de retiro.
 - **Producto**: Implementar una clase que permita gestionar el precio de un producto y calcular su precio final con un descuento aplicado.
-- **Figuras**: Crear una clase abstracta `Shape` y subclases para calcular el área y perímetro de formas geométricas.
+- **Figuras**: Crear una clase abstracta Shape y subclases para calcular el área y perímetro de formas geométricas.
 - **Sistema de Gestión de Biblioteca**: Diseñar un sistema para gestionar el préstamo de libros y revistas en una biblioteca.
 
 🔗 **[Explicación detallada](https://github.com/RodrigoStranger/dispositivos-moviles-25-1/tree/main/Practica%202%20-%20Programacion%20Orientada%20a%20Objetos%20Kotlin)**
@@ -59,7 +59,7 @@
 
 ## Práctica 5: Fragments y Navegación
 
-🔍 **Objetivo**: El objetivo de esta práctica es comprender y aplicar el uso de **Fragments** en Android, gestionando la navegación entre diferentes pantallas dentro de la misma actividad utilizando el **Navigation Component**. Además, se aprenderá a pasar datos entre fragments y cómo gestionar la pila de fragments (back stack).
+🔍 **Objetivo**: Comprender y aplicar el uso de **Fragments** en Android, gestionando la navegación entre diferentes pantallas dentro de la misma actividad utilizando el **Navigation Component**. Además, se aprenderá a pasar datos entre fragments y cómo gestionar la pila de fragments (back stack).
 
 💡 **Ejercicios de esta práctica**:
 - **Configurador de pedidos de comida**: Permitir al usuario armar un pedido paso a paso y visualizarlo al final.

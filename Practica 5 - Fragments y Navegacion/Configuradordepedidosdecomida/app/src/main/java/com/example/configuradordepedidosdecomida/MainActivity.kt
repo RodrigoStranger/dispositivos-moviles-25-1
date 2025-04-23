@@ -5,12 +5,12 @@ package com.example.configuradordepedidosdecomida
     Curso: Programacion De Dispositivos Moviles
     Semestre: VI
     Fecha: 19/03/2025
-    Ultima modificacion: 23/03/2025 11:15 am
+    Ultima modificacion: 23/03/2025 11:16 am
 */
 
 /*
     Configurador de pedido de comida.
-    Objetivo: Permitir al usuario armar un pedido paso a paso y visualizarlo al final.
+    Objetivo: Permitir al usuario armar un pedido paso a paso y visualizarlo al finalizar.
 
     Fragments:
     InicioFragment

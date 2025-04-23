@@ -44,9 +44,12 @@ class ResumenPedidoFragment : Fragment(R.layout.fragment_resumen_pedido) {
             }
             // Comunicación de regreso con setFragmentResult() - Enviando datos al fragmento anterior
             setFragmentResult("requestKey", bundle)
-            // Uso de popBackStack() para volver a otro fragmento
-            findNavController().popBackStack()
-            //findNavController().popBackStack() // descomentar si se quiere volver de ResumenFragment a SeleccionComidaFragment
+            // Uso de popBackStack() para volver al fragmento de seleccion de comida principal
+            //findNavController().popBackStack()
+            //findNavController().popBackStack()
+
+            // Uso de popBackStack() con parámetros para volver al fragmento de selección de comida
+            findNavController().popBackStack(R.id.seleccionComidaFragment, false)
         }
     }
 }

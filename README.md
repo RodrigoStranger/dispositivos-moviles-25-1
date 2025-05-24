@@ -1,4 +1,4 @@
-# Programación Para Dispositivos Móviles
+# Programación Para Dispositivos Móviles - Kotlin
 
 📅 **Ciclo Académico**: 2025 - I  
 🎓 **Semestre**: VI  
